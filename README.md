@@ -8,7 +8,7 @@ Keep all the files and folders as it is in one folder. Download the game by one 
 
 Download the [zip file](https://github.com/dhruvmanila/scrabble/archive/master.zip) 
 
-Download the folder from terminal: `git clone <add link>`
+Download the folder from terminal: `git clone https://github.com/dhruvmanila/scrabble.git`
 
 ### How to open the game:
 
