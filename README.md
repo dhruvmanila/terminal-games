@@ -1,6 +1,6 @@
-# Scrabble [MIT 6.0001]
+# Scrabble [ MIT 6.0001 ]
 
-The old game of scrabble made as an assignment to the course Introduction to Computer Science and Programming using Python. The game has features combined from both the edX version of the course and the OCW fall 2016 version. The game is simple and played on the terminal. Requirements and instructions are mentioned below.
+The old game of scrabble made as an assignment to the course Introduction to Computer Science and Programming using Python. The game has features combined from both the [edX](https://courses.edx.org/courses/course-v1:MITx+6.00.1x+2T2020/course/) version of the course and the [OCW fall](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/index.htm) 2016 version. The game is simple and played on the terminal. Requirements and instructions are mentioned below.
 
 ## Instructions
 
@@ -26,20 +26,38 @@ To play the game enter the following command: `python3 main.py`
 
 If you know how to play scrabble then the rules for this one are pretty similar. At first you will be given the choice on how many hands you want to play. Then the computer will randomly create a hand and show it to you. Now you have a choice whether to substitute a letter from the given hand. If you type 'y' then you will be given the choice of which letter to substitute. You can only substitute one letter and it should be present in your hand.
 
-After that you can create words and press enter. The computer will check whether the word is correct and compute the points and print it. There are over 175,393 words in the file. If you want to add another word you can add it in words.txt file. **THE WORD SHOULD BE ADDED IN A NEWLINE.**
+There is a wildcard character " * " which can be used in place of any of the vowels. Enter the word in the input prompt. The computer will check whether the word is correct and compute the points and print it. There are over 175,393 words in the file. If you want to add another word you can add it in words.txt file. **THE WORD SHOULD BE ADDED IN A NEWLINE.**
 
-After playing one hand you will be given the choice to replay the hand if you were not satisfied. The highest score will be considered into the final score.
+After playing one hand you will be given the choice to replay the hand if you were not satisfied. The highest score will be considered into the final score. After playing the desired number of hands, the total points will be computed and shown. You will be asked whether to play again or not. 
 
 ### Rules for the game
 
 - For each hand you can substitute only once and replay the hand only once.
+- " * " wildcard character can replace only the vowels (a, e, i, o, u)
 - Wrong inputs will be denied and error message will be shown.
+- [y/n] inputs only take the letter "y" and "n"
 - By default the number of letters in a hand are seven. To change the number see *additional instructions.*
 - Letters from random words entered will be removed from the hand.
 
 ### Additional Instructions
 
-If you want to change the number of letters in each hand or select a different file containing words you can do so by opening the main.py file in any text editor and edit the section with the heading **public variables**. Do not edit any of the things outside this boundary.
+If you want to change the number of letters in each hand or select a different file containing words you can do so by opening the **main.py** file in any text editor and edit the section with the heading **public variables**. Do not edit any of the things outside this boundary:
+
+```
+# ---------------- public variables ----------------
+
+# File containing the words, 
+# words must be in separate lines
+WORDLIST_FILENAME = "words.txt"
+
+# Size of each hand
+HAND_SIZE = 7
+
+# Length of line separating the sections
+LINE_SEP = '-' * 50
+
+# ------------ end of public variables -------------
+```
 
 ## Requirements
 - Python version 3.x
