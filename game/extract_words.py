@@ -16,13 +16,14 @@ if __name__ == "__main__":
     with open('words.txt', 'w') as main_word_file:
         extract_words(main_word_file)
 
-'''Sample:
-[
-    {
-        "word":"aa"
-        },
-    {
-        "word":"ab"
-        }
-]
-'''
+"""
+    Sample:
+    [
+        {
+            "word":"aa"
+            },
+        {
+            "word":"ab"
+            }
+    ]
+"""
