@@ -1,0 +1,42 @@
+=========================================================
+
+------------- Welcome to the game, Hangman! -------------
+
+Hangman is a game where one player thinks of a word,
+phrase or sentence and the other tries to guess it
+by suggesting letters within a certain number of guesses.
+The word to guess is represented by a row of dashes,
+representing each letter of the word.
+
+The computer will inform you how long the word is.
+In each round you will be able to enter one letter
+as a guess. You will be shown how many letters are
+available for you to guess. If you win the game,
+the computer will calculate the number of points.
+If you wish to play multiple games, the points
+will accumulate.
+
+------------------------- HINTS -------------------------
+
+There is a special symbol which you can type to get
+the hint. You have 3 warnings to find out which symbol
+it is. You will only have one chance for calling the
+hint so make sure you call it at an appropriate time.
+
+EXAMPLE: For "a_ _ l_" the hints will be:
+
+Possible word matches are:
+addle adult agile aisle amble ample amply amyls angle
+ankle apple apply aptly arils atilt
+
+------------------ RULES FOR THE GAME ------------------
+
+• At the start of each game you will be given
+  6 guesses and 3 warnings.
+• Number of guesses will be cut when you input
+  a wrong guess. (2 for vowels and 1 for consonants)
+• Number of warnings will be cut if you input any
+  digits or symbols (except for the hint symbol) and
+  when you input the same letter again.
+
+=========================================================
