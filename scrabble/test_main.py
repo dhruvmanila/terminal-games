@@ -3,7 +3,7 @@
 import pytest
 from .main import get_word_score, update_hand, is_valid_word, load_words
 
-WORD_LIST = load_words()
+WORD_DICT = load_words()
 
 TEST_SCORE = [
     ("", 7, 0),
@@ -63,7 +63,7 @@ def test_update_hand(handorig, word, expected):
 @pytest.mark.parametrize('handorig, word, expected', TEST_VALID_WORD)
 def test_is_valid_word(handorig, word, expected):
     handcopy = handorig.copy()
-    outcome = is_valid_word(word, handcopy, WORD_LIST)
+    outcome = is_valid_word(word, handcopy, WORD_DICT)
     assert outcome == expected
     assert handcopy == handorig, "Implementation mutated the original hand."
 
@@ -71,6 +71,6 @@ def test_is_valid_word(handorig, word, expected):
 @pytest.mark.parametrize('handorig, word, expected', TEST_WILDCARD)
 def test_wildcard(handorig, word, expected):
     handcopy = handorig.copy()
-    outcome = is_valid_word(word, handcopy, WORD_LIST)
+    outcome = is_valid_word(word, handcopy, WORD_DICT)
     assert outcome == expected
     assert handcopy == handorig, "Implementation mutated the original hand."

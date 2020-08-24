@@ -1,41 +1,41 @@
-from random import choice
+import random
+import json
 from string import ascii_lowercase, punctuation, digits, whitespace
-from time import sleep
+from typing import Tuple, Iterable
+from itertools import chain
 
 # Globals
 INSTRUCTION_FILENAME = "instructions.txt"
-WORD_FILENAME = 'words.txt'
+WORDS_FILENAME = 'words.json'
 INPUT_CHECK = punctuation + digits + whitespace
 VOWELS = 'aeiou'
 LINE_SEP = '-' * 50
 
 
-def load_words():
+def load_words() -> dict:
     """
-    Returns a list of valid words. Words are strings of lowercase letters.
+    Returns a dictionary of valid words with keys being the length of the
+    words. Words are strings of lowercase letters.
+
     Depending on the size of the word list, this function may
     take a while to finish.
     """
-    print("Loading word list from file...")
-
-    with open(WORD_FILENAME) as word_file:
-        word_list = []
-        for line in word_file:
-            word_list.append(line.strip().lower())
-
-    print(len(word_list), "words loaded.")
-    return word_list
+    print(f"\nLoading words from the file...")
+    with open(WORDS_FILENAME) as word_file:
+        word_dict = json.load(word_file)
+    return word_dict
 
 
-def choose_word(word_list):
+def choose_word(word_dict: dict) -> str:
     """
     word_list (list): list of words (strings)
     Returns a word from wordlist at random
     """
-    return choice(word_list)
+    word_list = list(chain(*word_dict.values()))
+    return random.choice(word_list)
 
 
-def is_word_guessed(secret_word, letters_guessed):
+def is_word_guessed(secret_word: str, letters_guessed: list) -> bool:
     """
     secret_word: string, the word the user is guessing;
         assumes all letters are lowercase
@@ -52,7 +52,7 @@ def is_word_guessed(secret_word, letters_guessed):
     return found
 
 
-def get_guessed_word(secret_word, letters_guessed):
+def get_guessed_word(secret_word: str, letters_guessed: list) -> str:
     """
     secret_word: string, the word the user is guessing
     letters_guessed: list (of letters), which letters have been guessed so far
@@ -68,7 +68,7 @@ def get_guessed_word(secret_word, letters_guessed):
     return word
 
 
-def get_available_letters(letters_guessed):
+def get_available_letters(letters_guessed: list) -> str:
     """
     letters_guessed: list (of letters), which letters have been guessed so far
     returns: string (of letters), comprised of letters that represents which
@@ -81,8 +81,8 @@ def get_available_letters(letters_guessed):
     return letter_string
 
 
-def warnings_check(secret_word, letters_guessed, user_letter, num_warnings,
-                   num_guess):
+def warnings_check(secret_word: str, letters_guessed: list, user_letter: str,
+                   num_warnings: int, num_guess: int) -> Tuple[int, int]:
     """
     TODO: Make this more readable and efficient.
     secret_word: string, the secret word to guess
@@ -120,26 +120,30 @@ def warnings_check(secret_word, letters_guessed, user_letter, num_warnings,
     return num_guess, num_warnings
 
 
-def arrange_words(word_list):
+def input_handling(request_msg: str, input_option: Iterable,
+                   error_msg: str = "Invalid input.") -> str:
     """
-    wordList  (list): list of words (strings)
+    returns (str) user choice from the option and handles invalid input
 
-    Returns a dictionary;
-    keys, number of letters;
-    values, list of words with same number of letters
+    request_msg (str): input prompt (exclude ':')
+    input_option (str/list): string/list containing the options
+    error_msg (str)(Optional): Default "Invalid input."
+
+    NOTE: For str input, one string options only
+          otherwise input a list of options.
     """
-    word_dict = {}
+    option_list = list(input_option)
 
-    for word in word_list:
-        if len(word) not in word_dict:
-            word_dict[len(word)] = [word]
-        else:
-            word_dict[len(word)].append(word)
+    while True:
+        user_input = input(f"{request_msg}: ").lower()
+        try:
+            assert user_input in option_list
+            return user_input
+        except AssertionError:
+            print(f'"{user_input}": {error_msg}\n')
 
-    return word_dict
 
-
-def match_with_gaps(my_word_string, other_word):
+def match_with_gaps(my_word_string: str, other_word: str) -> bool:
     """
     my_word_string: string without _ characters, current guess of secret word
     other_word: string, regular English word
@@ -157,7 +161,7 @@ def match_with_gaps(my_word_string, other_word):
     return True
 
 
-def show_possible_matches(my_word, word_length):
+def show_possible_matches(my_word: str, word_length: str) -> None:
     """
     my_word: string with _ characters, current guess of secret word
     word_length: integer, length of the secretWord
@@ -179,7 +183,7 @@ def show_possible_matches(my_word, word_length):
     print(f"Possible word matches for [ {my_word} ] are:\n{word_matches}")
 
 
-def hangman_game(secret_word):
+def hangman_game(secret_word: str) -> None:
     """
     secret_word: string, the secret word to guess.
     Starts up an interactive game of Hangman.
@@ -204,7 +208,7 @@ def hangman_game(secret_word):
 
         if len(user_letter) > 1 or user_letter in INPUT_CHECK:
             if game_choice == 'y' and user_letter == '*' and hint_count == 1:
-                word_length = len(secret_word)
+                word_length = str(len(secret_word))
                 show_possible_matches(guessed_word, word_length)
                 hint_count -= 1
                 continue
@@ -239,7 +243,7 @@ def hangman_game(secret_word):
                 break
 
     if num_guess <= 0:
-        print(f"{LINE_SEP}Sorry, you ran out of guesses. The word was "
+        print(f"{LINE_SEP}\nSorry, you ran out of guesses. The word was "
               f"{secret_word}.")
 
 
@@ -249,18 +253,16 @@ if __name__ == "__main__":
         for line in fhand:
             line = line.strip()
             print(line)
-            sleep(0.05)
 
-    WORD_LIST = load_words()
-    WORD_DICT = arrange_words(WORD_LIST)
+    WORD_DICT = load_words()
     total_score = 0
-    game_choice = input('Do you want to play with hints? [y/n]: ')
+    game_choice = input_handling('Do you want to play with hints? [y/n]', 'yn')
 
-    choice = 'y'
-    while choice == 'y':
-        secret_word = choose_word(WORD_LIST).lower()
+    user_choice = 'y'
+    while user_choice == 'y':
+        secret_word = choose_word(WORD_DICT)
         hangman_game(secret_word)
-        choice = input('Do you want to play again? [y/n]: ')
+        user_choice = input_handling('Do you want to play again? [y/n]', 'yn')
 
     print(f'{LINE_SEP}\nYour total score for this session is: {total_score}')
     print(f'Thank you for playing.\n{LINE_SEP}')

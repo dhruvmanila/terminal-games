@@ -37,6 +37,14 @@ please google 'How to change directory from terminal in macOS/windows.'
 
 To play the game enter the following command: `python3 main.py`
 
+#### Words
+
+There is a folder named 'Words' which contains all the json files from which 
+I extracted the words. These files were available on the internet. I used the script
+extract_words.py which is present in the folder to parse all the files in words_json folder
+into a single file 'words.json' which is being used in both the games. Additionally,
+if you want the words of different length, the files are present in the words_json folder.
+
 ## Scrabble
 
 ### How to play the game
@@ -51,8 +59,8 @@ substitute one letter and it should be present in your hand.
 There is a wildcard character " * " which can be used in place of any of the 
 vowels. Enter the word in the input prompt. The computer will check whether 
 the word is correct and compute the points and print it. There are over 175,393 
-words in the file. If you want to add another word you can add it in words.txt 
-file. **THE WORD SHOULD BE ADDED IN A NEWLINE.**
+words in the json file. You can add additional words in the appropriate list
+in the json file.
 
 After playing one hand you will be given the choice to replay the hand if you 
 were not satisfied. The highest score will be considered into the final score. 
@@ -62,11 +70,11 @@ and shown. You will be asked whether to play again or not.
 ### Rules for the game
 
 - For each hand you can substitute only once and replay the hand only once.
-- " * " wildcard character can replace only the vowels (a, e, i, o, u)
+- " * " wildcard character can replace any of the vowels (a, e, i, o, u)
 - Wrong inputs will be denied and error message will be shown.
 - [y/n] inputs only take the letter "y" and "n"
 - By default the number of letters in a hand are seven. To change the number see *additional instructions.*
-- Letters from random words entered will be removed from the hand.
+- Letters entered randomly will be removed from the hand.
 
 ### Additional Instructions
 
@@ -77,10 +85,6 @@ any of the things outside this boundary:
 
 ```
 # ---------------- public variables ----------------
-
-# File containing the words, 
-# words must be in separate lines
-WORDLIST_FILENAME = "words.txt"
 
 # Size of each hand
 HAND_SIZE = 7

@@ -1,15 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
-import math
+import json
 import random
-import string
+from math import ceil
+from string import ascii_lowercase
 
 # ---------------- public variables ----------------
-
-# File containing the words, 
-# words must be in separate lines
-WORDLIST_FILENAME = "words.txt"
 
 # Size of each hand
 HAND_SIZE = 7
@@ -18,6 +14,8 @@ HAND_SIZE = 7
 LINE_SEP = '-' * 50
 
 # ------------ end of public variables -------------
+
+WORDS_FILENAME = "words.json"
 
 VOWELS = 'aeiou'
 CONSONANTS = 'bcdfghjklmnpqrstvwxyz'
@@ -31,33 +29,16 @@ SCRABBLE_LETTER_VALUES = {
 
 def load_words():
     """
-    Returns a list of valid words. Words are strings of lowercase letters.
+    Returns a dictionary of valid words with keys being the length of the
+    words. Words are strings of lowercase letters.
     
     Depending on the size of the word list, this function may
     take a while to finish.
     """
-    print(f"{LINE_SEP}\nLoading word list from file...")
-    with open(WORDLIST_FILENAME) as word_file:
-        word_list = []
-        for line in word_file:
-            word_list.append(line.strip().lower())
-    print(f"{len(word_list)} words loaded.\n{LINE_SEP}")
-    return word_list
-
-
-def get_frequency_dict(sequence):
-    """
-    Returns a dictionary where the keys are elements of the sequence
-    and the values are integer counts, for the number of times that
-    an element is repeated in the sequence.
-
-    sequence: string or list
-    return: dictionary (string -> int)
-    """
-    freq = {}
-    for x in sequence:
-        freq[x] = freq.get(x, 0) + 1
-    return freq
+    print(f"{LINE_SEP}\nLoading words from the file...")
+    with open(WORDS_FILENAME) as word_file:
+        word_dict = json.load(word_file)
+    return word_dict
 
 
 def get_word_score(word, n):
@@ -112,7 +93,7 @@ def deal_hand(n):
     returns: dictionary (string -> int)
     """
     hand = {}
-    num_vowels = int(math.ceil(n / 3))
+    num_vowels = int(ceil(n / 3))
 
     for _ in range(num_vowels - 1):
         x = random.choice(VOWELS)
@@ -153,7 +134,7 @@ def update_hand(hand, word):
     return new_hand
     
 
-def is_valid_word(word, hand, word_list):
+def is_valid_word(word, hand, word_dict):
     """
     Returns True if word is in the word_list and is entirely
     composed of letters in the hand. Otherwise, returns False.
@@ -169,17 +150,21 @@ def is_valid_word(word, hand, word_list):
     returns: boolean
     """
     word = word.lower()  # Only for testing
+    word_length = str(len(word))
+    if word_length == '1':
+        return False
+
     for letter in word:
         if letter not in hand or word.count(letter) > hand[letter]:
             return False
         elif letter == '*':
             wild_word_list = [word.replace('*', v) for v in VOWELS]
             for wild_word in wild_word_list:
-                if wild_word in word_list:
+                if wild_word in word_dict[word_length]:
                     return True
             return False
         
-    return True if word in word_list else False
+    return True if word in word_dict[word_length] else False
 
 
 def calculate_handlen(hand):
@@ -192,7 +177,7 @@ def calculate_handlen(hand):
     return sum([num for num in hand.values()])
 
 
-def play_hand(hand, word_list):
+def play_hand(hand):
 
     """
     Allows the user to play the given hand.
@@ -217,7 +202,7 @@ def play_hand(hand, word_list):
         if player_input == '.':
             break            
         
-        elif is_valid_word(player_input, hand, word_list):
+        elif is_valid_word(player_input, hand, WORD_DICT):
             hand_length = calculate_handlen(hand)
             player_input_score = get_word_score(player_input, hand_length)
             total_score += player_input_score
@@ -255,7 +240,7 @@ def substitute_hand(hand, letter):
     new_hand = dict(hand)
 
     while letter in new_hand:
-        rand_letter = random.choice(string.ascii_lowercase)
+        rand_letter = random.choice(ascii_lowercase)
         if rand_letter in new_hand:
             continue        
         else:
@@ -303,7 +288,7 @@ def input_handling(request_msg, input_option, error_msg="Invalid input."):
             print(f'"{user_input}": {error_msg}\n')
 
 
-def play_game(word_list, num_hands):
+def play_game(num_hands):
     """
     Allow the user to play a series of hands
     Returns the total score for the series of hands
@@ -321,17 +306,17 @@ def play_game(word_list, num_hands):
         
         if sub_choice == 'y':
             sub_letter = input_handling("Which letter would you like to "
-                                        "replace", string.ascii_letters)
+                                        "replace", ascii_lowercase)
             hand = substitute_hand(hand, sub_letter)
-            hand_count = play_hand(hand, word_list)
+            hand_count = play_hand(hand)
         else:
-            hand_count = play_hand(hand, word_list)
+            hand_count = play_hand(hand)
         
         replay_choice = input_handling('Would you like to replay the hand? '
                                        '[y/n]', 'yn')
 
         if replay_choice == 'y':
-            replay_hand_count = play_hand(hand, word_list)
+            replay_hand_count = play_hand(hand)
             hand_count = replay_hand_count if replay_hand_count > hand_count \
                 else hand_count
         
@@ -344,18 +329,18 @@ def play_game(word_list, num_hands):
 
 
 if __name__ == '__main__':
-    WORD_LIST = load_words()
+    WORD_DICT = load_words()
     total_series_points = 0
-    choice = 'y'
+    game_choice = 'y'
 
-    while choice == 'y':
+    while game_choice == 'y':
         total_hands = read_val(int, "Enter total number of hands "
                                     "you want to play")
-        total_points = play_game(WORD_LIST, total_hands)
+        total_points = play_game(total_hands)
         print(f"{LINE_SEP}\nTotal score over {total_hands} hands: "
               f"{total_points}\n{LINE_SEP}")
-        choice = input_handling("Do you want to play another series? [y/n]",
-                                "yn")
+        game_choice = input_handling("Do you want to play another series? "
+                                     "[y/n]", "yn")
         total_series_points += total_points
 
     print(f"Thank you for playing.\n{LINE_SEP}")
