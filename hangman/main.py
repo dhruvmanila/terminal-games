@@ -20,9 +20,10 @@ def load_words() -> dict:
     Depending on the size of the word list, this function may
     take a while to finish.
     """
-    print(f"\nLoading words from the file...")
+    print(f"Loading words from the file...")
     with open(WORDS_FILENAME) as word_file:
         word_dict = json.load(word_file)
+    print(f"Words loaded. Game on!\n{LINE_SEP}")
     return word_dict
 
 

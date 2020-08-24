@@ -4,6 +4,7 @@ import json
 import random
 from math import ceil
 from string import ascii_lowercase
+from typing import Iterable
 
 # ---------------- public variables ----------------
 
@@ -27,21 +28,22 @@ SCRABBLE_LETTER_VALUES = {
 }
 
 
-def load_words():
+def load_words() -> dict:
     """
     Returns a dictionary of valid words with keys being the length of the
     words. Words are strings of lowercase letters.
-    
+
     Depending on the size of the word list, this function may
     take a while to finish.
     """
     print(f"{LINE_SEP}\nLoading words from the file...")
     with open(WORDS_FILENAME) as word_file:
         word_dict = json.load(word_file)
+    print(f"Words loaded. Game on!\n{LINE_SEP}")
     return word_dict
 
 
-def get_word_score(word, n):
+def get_word_score(word: str, n: int) -> int:
     """
     Returns the score for a word. Assumes the word is a valid word.
 
@@ -65,7 +67,7 @@ def get_word_score(word, n):
     return game_points
 
 
-def display_hand(hand):
+def display_hand(hand: dict) -> str:
     """
     Returns the string in a displayable format.
     The order of the letters is unimportant.
@@ -79,7 +81,7 @@ def display_hand(hand):
     return letter_string
 
 
-def deal_hand(n):
+def deal_hand(n: int) -> dict:
     """
     Returns a random hand containing (n - 1) lowercase letters.
     ceil(n/3) letters in the hand are VOWELS.
@@ -98,16 +100,16 @@ def deal_hand(n):
     for _ in range(num_vowels - 1):
         x = random.choice(VOWELS)
         hand[x] = hand.get(x, 0) + 1
-    
-    for _ in range(num_vowels, n):    
+
+    for _ in range(num_vowels, n):
         x = random.choice(CONSONANTS)
         hand[x] = hand.get(x, 0) + 1
-    
+
     hand['*'] = 1
     return hand
 
 
-def update_hand(hand, word):
+def update_hand(hand: dict, word: str) -> dict:
     """
     Does NOT assume that hand contains every letter in word at least as
     many times as the letter appears in word. Letters in word that don't
@@ -121,7 +123,7 @@ def update_hand(hand, word):
     Has no side effects: does not modify hand.
 
     word: string
-    hand: dictionary (string -> int)    
+    hand: dictionary (string -> int)
     returns: dictionary (string -> int)
     """
     word = word.lower()  # Only for testing
@@ -132,21 +134,21 @@ def update_hand(hand, word):
         if new_hand[letter] > 0:
             new_hand[letter] -= 1
     return new_hand
-    
 
-def is_valid_word(word, hand, word_dict):
+
+def is_valid_word(word: str, hand: dict, word_dict: dict) -> bool:
     """
     Returns True if word is in the word_list and is entirely
     composed of letters in the hand. Otherwise, returns False.
     Does not mutate hand or word_list.
 
-    If the word contains the wildcard character '*', it makes a 
+    If the word contains the wildcard character '*', it makes a
     list by replacing it with each vowels and searches the word
     in the word_list.
-   
+
     word: string
     hand: dictionary (string -> int)
-    word_list: list of lowercase strings
+    word_dict: dictionary containing the words
     returns: boolean
     """
     word = word.lower()  # Only for testing
@@ -163,21 +165,21 @@ def is_valid_word(word, hand, word_dict):
                 if wild_word in word_dict[word_length]:
                     return True
             return False
-        
+
     return True if word in word_dict[word_length] else False
 
 
-def calculate_handlen(hand):
-    """ 
+def calculate_handlen(hand: dict) -> int:
+    """
     Returns the length (number of letters) in the current hand.
-    
+
     hand: dictionary (string-> int)
     returns: integer
     """
     return sum([num for num in hand.values()])
 
 
-def play_hand(hand):
+def play_hand(hand: dict) -> int:
 
     """
     Allows the user to play the given hand.
@@ -188,7 +190,6 @@ def play_hand(hand):
     asking the user to choose another word.
 
     hand: dictionary (string -> int)
-    word_list: list of lowercase strings
     returns: (int) total score for the hand
     """
     total_score = 0
@@ -198,10 +199,10 @@ def play_hand(hand):
         print(f"\nCurrent hand: {display_hand(hand)}")
         player_input = input('Enter word, or a "." to indicate '
                              'that you are finished: ').lower()
-        
+
         if player_input == '.':
-            break            
-        
+            break
+
         elif is_valid_word(player_input, hand, WORD_DICT):
             hand_length = calculate_handlen(hand)
             player_input_score = get_word_score(player_input, hand_length)
@@ -214,7 +215,7 @@ def play_hand(hand):
             print("Invalid word, please try again.")
 
         hand = update_hand(hand, player_input)
-            
+
     if player_input == '.':
         print(f"\nGame ended. Total score: {total_score} points.\n")
     else:
@@ -223,8 +224,8 @@ def play_hand(hand):
     return total_score
 
 
-def substitute_hand(hand, letter):
-    """ 
+def substitute_hand(hand: dict, letter: str) -> dict:
+    """
     Allows the user to replace all copies of one letter in the hand
     (chosen by user) with a new letter chosen from the VOWELS and CONSONANTS
     at random. The new letter will be different from user's choice, and won't
@@ -232,7 +233,7 @@ def substitute_hand(hand, letter):
     in the hand, the hand will be the same.
 
     Has no side effects: does not mutate hand.
-    
+
     hand: dictionary (string -> int)
     letter: string
     returns: dictionary (string -> int)
@@ -242,15 +243,15 @@ def substitute_hand(hand, letter):
     while letter in new_hand:
         rand_letter = random.choice(ascii_lowercase)
         if rand_letter in new_hand:
-            continue        
+            continue
         else:
             letter_value = new_hand.pop(letter)
             new_hand[rand_letter] = letter_value
-    
+
     return new_hand
 
 
-def read_val(val_type, request_msg, error_msg="Invalid input."):
+def read_val(val_type, request_msg: str, error_msg: str = "Invalid input."):
     """
     val_type: value type to return
     request_msg: input prompt (exclude ':')
@@ -266,7 +267,8 @@ def read_val(val_type, request_msg, error_msg="Invalid input."):
             print(f'"{user_input}": {error_msg}\n')
 
 
-def input_handling(request_msg, input_option, error_msg="Invalid input."):
+def input_handling(request_msg: str, input_option: Iterable,
+                   error_msg: str = "Invalid input.") -> str:
     """
     returns (str) user choice from the option and handles invalid input
 
@@ -274,11 +276,11 @@ def input_handling(request_msg, input_option, error_msg="Invalid input."):
     input_option (str/list): string/list containing the options
     error_msg (str)(Optional): Default "Invalid input."
 
-    NOTE: For str input, one string options only 
+    NOTE: For str input, one string options only
           otherwise input a list of options.
     """
     option_list = list(input_option)
-    
+
     while True:
         user_input = input(f"{request_msg}: ").lower()
         try:
@@ -288,11 +290,10 @@ def input_handling(request_msg, input_option, error_msg="Invalid input."):
             print(f'"{user_input}": {error_msg}\n')
 
 
-def play_game(num_hands):
+def play_game(num_hands: int) -> int:
     """
     Allow the user to play a series of hands
     Returns the total score for the series of hands
-    word_list: list of lowercase strings
     """
     series_count = 0
 
@@ -303,7 +304,7 @@ def play_game(num_hands):
 
         sub_choice = input_handling('Would you like to substitute a letter? '
                                     '[y/n]', 'yn')
-        
+
         if sub_choice == 'y':
             sub_letter = input_handling("Which letter would you like to "
                                         "replace", ascii_lowercase)
@@ -311,7 +312,7 @@ def play_game(num_hands):
             hand_count = play_hand(hand)
         else:
             hand_count = play_hand(hand)
-        
+
         replay_choice = input_handling('Would you like to replay the hand? '
                                        '[y/n]', 'yn')
 
@@ -319,13 +320,13 @@ def play_game(num_hands):
             replay_hand_count = play_hand(hand)
             hand_count = replay_hand_count if replay_hand_count > hand_count \
                 else hand_count
-        
+
         series_count += hand_count
 
     return series_count
 
 
-# --------------------- END OF MODULE --------------------- 
+# --------------------- END OF MODULE ---------------------
 
 
 if __name__ == '__main__':
