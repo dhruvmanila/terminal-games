@@ -5,6 +5,7 @@ import random
 from math import ceil
 from string import ascii_lowercase
 from typing import Iterable
+from itertools import chain
 
 # ---------------- public variables ----------------
 
@@ -180,7 +181,6 @@ def calculate_handlen(hand: dict) -> int:
 
 
 def play_hand(hand: dict) -> int:
-
     """
     Allows the user to play the given hand.
 
@@ -249,6 +249,35 @@ def substitute_hand(hand: dict, letter: str) -> dict:
             new_hand[rand_letter] = letter_value
 
     return new_hand
+
+
+def comp_choose_word(hand: dict, word_dict: dict, n: int) -> str:
+    """
+    Given a hand and a wordList, find the word that gives 
+    the maximum value score, and return it.
+    If no words in the wordList can be made from the hand, return None.
+    """
+    best_score = 0
+    best_word = None
+    word_chain = chain(*word_dict.values())
+
+    for word in word_chain:
+        if is_valid_word(word, hand, word_dict):
+            score = get_word_score(word, n)
+            if score > best_score:
+                best_score = score
+                best_word = word
+
+    return best_word
+
+
+def comp_play_hand(hand, word_dict, hand_size):
+    """
+    Allows the computer to play the given hand, following the same procedure
+    as playHand, except instead of the user choosing a word, the computer 
+    chooses it.
+    """
+    pass
 
 
 def read_val(val_type, request_msg: str, error_msg: str = "Invalid input."):
