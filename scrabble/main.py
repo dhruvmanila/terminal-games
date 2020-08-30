@@ -322,11 +322,12 @@ def play_series(num_hands: int, word_dict: Dict[int, List[str]], comp_choice: st
     """
     series_count = 0
     comp_series_count = comp_hand_count = 0
-    replay_msg = 'Do you want to replay the hand? [y/n]'
 
     while num_hands > 0:
         num_hands -= 1
         hand = deal_hand(HAND_SIZE)
+        # Resetting the replay message
+        replay_msg = 'Do you want to replay the hand? [y/n]'
         print(f"{LINE_SEP}\nCurrent hand: {display_hand(hand)}")
 
         sub_choice = input_handling('Do you want to substitute a letter? '
