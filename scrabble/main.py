@@ -154,6 +154,38 @@ def calculate_handlen(hand: Dict[str, int]) -> int:
     return sum([num for num in hand.values()])
 
 
+def comp_update_word(hand: Dict[str, int], word: str) -> Dict[str, int]:
+    """
+    Updates and returns the computers word if it used the wildcard '*' 
+    otherwise returns the word as it is.
+    """
+    new_word = word
+
+    for letter in word:
+        if word.count(letter) > hand.get(letter, 0):
+            new_word = new_word.replace(letter, '*', 1)
+            break
+
+    return new_word
+
+
+def comp_all_hands(hand: Dict[str, int]) -> List[Dict[str, int]]:
+    """
+    Returns a list of hand (dictionary) which are the five possibilities
+    of a hand with the wildcard replaced with each vowels.
+    Does not mutate hand.
+    """
+    result = []
+
+    for v in VOWELS:
+        temp_hand = hand.copy()
+        value = temp_hand.pop('*')
+        temp_hand[v] = temp_hand.get(v, 0) + value
+        result.append(temp_hand)
+
+    return result
+
+
 def comp_choose_word(hand: Dict[str, int], word_dict: Dict[int, List[str]],
                      hand_length: int) -> Tuple[str, int]:
     """
@@ -163,16 +195,19 @@ def comp_choose_word(hand: Dict[str, int], word_dict: Dict[int, List[str]],
     """
     best_score = 0
     best_word = None
+    all_hands = comp_all_hands(hand)
+
     # No need to loop over words of size longer than the current hand length
     possible_words = list(word_dict.values())[:hand_length - 1]
-    word_chain = chain(*possible_words)
 
-    for word in word_chain:
-        if is_valid_word(word, hand, word_dict):
-            score = get_word_score(word, hand_length)
-            if score > best_score:
-                best_score = score
-                best_word = word
+    for vhand in all_hands:
+        word_chain = chain(*possible_words)
+        for word in word_chain:
+            if is_valid_word(word, vhand, word_dict):
+                score = get_word_score(word, hand_length)
+                if score > best_score:
+                    best_score = score
+                    best_word = word
 
     return best_word, best_score
 
@@ -196,13 +231,10 @@ def comp_play_hand(hand: Dict[str, int], word_dict: Dict[int, List[str]]) -> int
         if comp_word is None:
             break
         else:
-            if not is_valid_word(comp_word, hand, word_dict):
-                print('This is a terrible error! I need to check my own code!')
-                break
-            else:
-                comp_total_score += comp_score
-                print(f'"{comp_word}" earned {comp_score} points. '
-                      f'Total: {comp_total_score} points.')
+            comp_word = comp_update_word(hand, comp_word)
+            comp_total_score += comp_score
+            print(f'"{comp_word}" earned {comp_score} points. '
+                  f'Total: {comp_total_score} points.')
 
         COMP_WORDS.append(comp_word)
         hand = update_hand(hand, comp_word)
