@@ -187,7 +187,7 @@ def comp_all_hands(hand: Dict[str, int]) -> List[Dict[str, int]]:
 
 
 def comp_choose_word(hand: Dict[str, int], word_dict: Dict[int, List[str]],
-                     hand_length: int) -> Tuple[str, int]:
+                     hand_length: int) -> str:
     """
     Given a hand and a word_dict, find the word that gives 
     the maximum value score, and return it.
@@ -209,7 +209,7 @@ def comp_choose_word(hand: Dict[str, int], word_dict: Dict[int, List[str]],
                     best_score = score
                     best_word = word
 
-    return best_word, best_score
+    return best_word
 
 
 def comp_play_hand(hand: Dict[str, int], word_dict: Dict[int, List[str]]) -> int:
@@ -226,12 +226,13 @@ def comp_play_hand(hand: Dict[str, int], word_dict: Dict[int, List[str]]) -> int
 
     while (hand_length := calculate_handlen(hand)) > 0:
         print(f"\nCurrent hand: {display_hand(hand)}")
-        comp_word, comp_score = comp_choose_word(hand, word_dict, hand_length)
+        comp_word = comp_choose_word(hand, word_dict, hand_length)
 
         if comp_word is None:
             break
         else:
             comp_word = comp_update_word(hand, comp_word)
+            comp_score = get_word_score(comp_word, hand_length)
             comp_total_score += comp_score
             print(f'"{comp_word}" earned {comp_score} points. '
                   f'Total: {comp_total_score} points.')
