@@ -352,7 +352,7 @@ def play():
             print(line)
 
     WORD_DICT = load_words()
-    total_score = 0
+    final_score = 0
 
     hint_choice = input_handling('Do you want to play with hints? [y/n]', 'yn')
 
@@ -360,9 +360,10 @@ def play():
     while user_choice == 'y':
         secret_word = choose_word(WORD_DICT)
         total_score = hangman_game(secret_word, WORD_DICT, hint_choice)
+        final_score += total_score
         user_choice = input_handling('Do you want to play again? [y/n]', 'yn')
 
-    print(f'{LINE_SEP}\nYour total score for this session is: {total_score}')
+    print(f'{LINE_SEP}\nYour total score for this session is: {final_score}')
     print(f'Thank you for playing.\n{LINE_SEP}')
 
 
