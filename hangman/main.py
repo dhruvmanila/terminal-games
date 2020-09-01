@@ -12,6 +12,75 @@ VOWELS = 'aeiou'
 LINE_SEP = '-' * 50
 
 
+def display_hangman(tries):
+    stages = [
+                r"""
+                    --------
+                    |      |
+                    |      o
+                    |     \|/
+                    |      |
+                    |     / \
+                    -
+                """,
+                r"""
+                    --------
+                    |      |
+                    |      o
+                    |     \|/
+                    |      |
+                    |     /
+                    -
+                """,
+                r"""
+                    --------
+                    |      |
+                    |      o
+                    |     \|/
+                    |      |
+                    |
+                    -
+                """,
+                r"""
+                    --------
+                    |      |
+                    |      o
+                    |     \|
+                    |      |
+                    |
+                    -
+                """,
+                r"""
+                    --------
+                    |      |
+                    |      o
+                    |      |
+                    |      |
+                    |
+                    -
+                """,
+                r"""
+                    --------
+                    |      |
+                    |      o
+                    |
+                    |
+                    |
+                    -
+                """,
+                r"""
+                    --------
+                    |      |
+                    |
+                    |
+                    |
+                    |
+                    -
+                """
+    ]
+    return stages[tries]
+
+
 def load_words() -> dict:
     """
     Returns a dictionary of valid words with keys being the length of the
@@ -184,7 +253,7 @@ def show_possible_matches(my_word: str, word_length: str) -> None:
     print(f"Possible word matches for [ {my_word} ] are:\n{word_matches}")
 
 
-def hangman_game(secret_word: str) -> None:
+def hangman_game(secret_word: str) -> int:
     """
     secret_word: string, the secret word to guess.
     Starts up an interactive game of Hangman.
@@ -193,6 +262,9 @@ def hangman_game(secret_word: str) -> None:
     num_guess = 6
     num_warnings = 3
     hint_count = 1
+    total_score = 0
+
+    hint_choice = input_handling('Do you want to play with hints? [y/n]', 'yn')
 
     print(f'{LINE_SEP}\nWelcome to the game, Hangman!')
     print(f'I am thinking of a word that is {len(secret_word)} letters long.')
@@ -208,7 +280,7 @@ def hangman_game(secret_word: str) -> None:
         user_letter = input('Please guess a letter: ').lower()
 
         if len(user_letter) > 1 or user_letter in INPUT_CHECK:
-            if game_choice == 'y' and user_letter == '*' and hint_count == 1:
+            if hint_choice == 'y' and user_letter == '*' and hint_count == 1:
                 word_length = str(len(secret_word))
                 show_possible_matches(guessed_word, word_length)
                 hint_count -= 1
@@ -237,7 +309,6 @@ def hangman_game(secret_word: str) -> None:
 
             if is_word_guessed(secret_word, letters_guessed):
                 game_score = num_guess * len(set(secret_word))
-                global total_score
                 total_score += game_score
                 print(f"{LINE_SEP}\nCongratulations, you won!")
                 print(f"Your score for this game is: {game_score}")
@@ -247,9 +318,10 @@ def hangman_game(secret_word: str) -> None:
         print(f"{LINE_SEP}\nSorry, you ran out of guesses. The word was "
               f"{secret_word}.")
 
+    return total_score
 
-if __name__ == "__main__":
 
+def play():
     with open(INSTRUCTION_FILENAME) as fhand:
         for line in fhand:
             line = line.strip()
@@ -257,13 +329,16 @@ if __name__ == "__main__":
 
     WORD_DICT = load_words()
     total_score = 0
-    game_choice = input_handling('Do you want to play with hints? [y/n]', 'yn')
 
     user_choice = 'y'
     while user_choice == 'y':
         secret_word = choose_word(WORD_DICT)
-        hangman_game(secret_word)
+        total_score = hangman_game(secret_word)
         user_choice = input_handling('Do you want to play again? [y/n]', 'yn')
 
     print(f'{LINE_SEP}\nYour total score for this session is: {total_score}')
     print(f'Thank you for playing.\n{LINE_SEP}')
+
+
+if __name__ == "__main__":
+    play()
