@@ -12,73 +12,87 @@ VOWELS = 'aeiou'
 LINE_SEP = '-' * 50
 
 
-def display_hangman(tries):
+def display_hangman(guess_rem: int, guessed: str) -> None:
     stages = [
-                r"""
-                    --------
+                fr"""
+                    +------+
                     |      |
-                    |      o
+                    |      
                     |     \|/
                     |      |
                     |     / \
-                    -
+                    |
+                ==================
+                {guessed}
                 """,
-                r"""
-                    --------
+                fr"""
+                    +------+
                     |      |
                     |      o
                     |     \|/
                     |      |
                     |     /
-                    -
+                    |
+                ==================
+                {guessed}
                 """,
-                r"""
-                    --------
+                fr"""
+                    +------+
                     |      |
                     |      o
                     |     \|/
                     |      |
                     |
-                    -
+                    |
+                ==================
+                {guessed}
                 """,
-                r"""
-                    --------
+                fr"""
+                    +------+
                     |      |
                     |      o
                     |     \|
                     |      |
                     |
-                    -
+                    |
+                ==================
+                {guessed}
                 """,
-                r"""
-                    --------
+                fr"""
+                    +------+
                     |      |
                     |      o
                     |      |
                     |      |
                     |
-                    -
+                    |
+                ==================
+                {guessed}
                 """,
-                r"""
-                    --------
+                fr"""
+                    +------+
                     |      |
                     |      o
                     |
                     |
                     |
-                    -
+                    |
+                ==================
+                {guessed}
                 """,
-                r"""
-                    --------
+                fr"""
+                    +------+
                     |      |
                     |
                     |
                     |
                     |
-                    -
+                    |
+                ==================
+                {guessed}
                 """
     ]
-    return stages[tries]
+    print(stages[guess_rem])
 
 
 def load_words() -> dict:
@@ -231,7 +245,7 @@ def match_with_gaps(my_word_string: str, other_word: str) -> bool:
     return True
 
 
-def show_possible_matches(my_word: str, word_length: str) -> None:
+def show_possible_matches(my_word: str, word_length: str, word_dict: dict) -> None:
     """
     my_word: string with _ characters, current guess of secret word
     word_length: integer, length of the secretWord
@@ -246,14 +260,14 @@ def show_possible_matches(my_word: str, word_length: str) -> None:
     word_matches = ''
     my_word_string = ''.join([letter for letter in my_word if letter != ' '])
 
-    for word in WORD_DICT[word_length]:
+    for word in word_dict[word_length]:
         if match_with_gaps(my_word_string, word):
             word_matches += (word + ' ')
 
     print(f"Possible word matches for [ {my_word} ] are:\n{word_matches}")
 
 
-def hangman_game(secret_word: str) -> int:
+def hangman_game(secret_word: str, word_dict: dict, hint_choice: str) -> int:
     """
     secret_word: string, the secret word to guess.
     Starts up an interactive game of Hangman.
@@ -264,7 +278,16 @@ def hangman_game(secret_word: str) -> int:
     hint_count = 1
     total_score = 0
 
-    hint_choice = input_handling('Do you want to play with hints? [y/n]', 'yn')
+    print(r"""
+   _                                             
+  | |                                            
+  | |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
+  | '_ \ / _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
+  | | | | (_| | | | | (_| | | | | | | (_| | | | |
+  |_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                      __/ |                      
+                     |___/  
+                           """)
 
     print(f'{LINE_SEP}\nWelcome to the game, Hangman!')
     print(f'I am thinking of a word that is {len(secret_word)} letters long.')
@@ -272,6 +295,7 @@ def hangman_game(secret_word: str) -> int:
 
     while num_guess > 0:
         guessed_word = get_guessed_word(secret_word, letters_guessed)
+        display_hangman(num_guess, guessed_word)
         print(f'{LINE_SEP}\nYou have {num_guess} guesses left.')
 
         available_letters = get_available_letters(letters_guessed)
@@ -282,7 +306,7 @@ def hangman_game(secret_word: str) -> int:
         if len(user_letter) > 1 or user_letter in INPUT_CHECK:
             if hint_choice == 'y' and user_letter == '*' and hint_count == 1:
                 word_length = str(len(secret_word))
-                show_possible_matches(guessed_word, word_length)
+                show_possible_matches(guessed_word, word_length, word_dict)
                 hint_count -= 1
                 continue
 
@@ -324,16 +348,18 @@ def hangman_game(secret_word: str) -> int:
 def play():
     with open(INSTRUCTION_FILENAME) as fhand:
         for line in fhand:
-            line = line.strip()
+            line = line.rstrip()
             print(line)
 
     WORD_DICT = load_words()
     total_score = 0
 
+    hint_choice = input_handling('Do you want to play with hints? [y/n]', 'yn')
+
     user_choice = 'y'
     while user_choice == 'y':
         secret_word = choose_word(WORD_DICT)
-        total_score = hangman_game(secret_word)
+        total_score = hangman_game(secret_word, WORD_DICT, hint_choice)
         user_choice = input_handling('Do you want to play again? [y/n]', 'yn')
 
     print(f'{LINE_SEP}\nYour total score for this session is: {total_score}')
