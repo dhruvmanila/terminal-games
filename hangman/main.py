@@ -12,7 +12,21 @@ VOWELS = 'aeiou'
 LINE_SEP = '-' * 50
 
 
-def display_hangman(guess_rem: int, guessed: str) -> None:
+def display_hangman(guess_rem: int, guessed: str, word: str = '') -> None:
+    if '_' not in guessed:
+        print(fr"""
+                    +------+    +----------+
+                    |         __| You won! |
+                    |        /  +----------+
+                    |       o
+                    |      \|/
+                    |       |
+                    |      / \
+                ==================
+          You saved the hangman: {guessed}
+                """)
+        return 
+    
     stages = [
                 fr"""
                     +------+
@@ -23,7 +37,7 @@ def display_hangman(guess_rem: int, guessed: str) -> None:
                     |     / \
                     |
                 ==================
-                {guessed}
+              You lost him: {word}
                 """,
                 fr"""
                     +------+
@@ -165,7 +179,7 @@ def get_available_letters(letters_guessed: list) -> str:
     return letter_string
 
 
-def warnings_check(secret_word: str, letters_guessed: list, user_letter: str,
+def warnings_check(letters_guessed: list, user_letter: str,
                    num_warnings: int, num_guess: int) -> Tuple[int, int]:
     """
     TODO: Make this more readable and efficient.
@@ -179,27 +193,25 @@ def warnings_check(secret_word: str, letters_guessed: list, user_letter: str,
     and also when the input is already guessed. Makes changes to the number of
     guesses and warnings and returns them as a tuple: (num_guess, num_warnings)
     """
-    guessed_word = get_guessed_word(secret_word, letters_guessed)
-
     if len(user_letter) > 1 or user_letter in INPUT_CHECK:
         if num_warnings == 0:
-            print("Oops! That is not a valid letter. You have no warnings "
-                  "left so you lose one guess:", guessed_word)
+            print("\nOops! That is not a valid letter. \nYou have no warnings "
+                  "left so you lose one guess:")
             num_guess -= 1
         else:
             num_warnings -= 1
-            print("Oops! That is not a valid letter. You "
-                  "have", num_warnings, "warnings left:", guessed_word)
+            print("\nOops! That is not a valid letter. \nYou "
+                  "have", num_warnings, "warnings left:")
 
     if user_letter in letters_guessed:
         if num_warnings == 0:
-            print("Oops! You've already guessed that letter. You have no "
-                  "warnings left so you lose one guess:", guessed_word)
+            print("\nOops! You've already guessed that letter. \nYou "
+                  "have no warnings left so you lose one guess:")
             num_guess -= 1
         else:
             num_warnings -= 1
-            print("Oops! You've already guessed that letter. You "
-                  "have", num_warnings, "warnings left:", guessed_word)
+            print("\nOops! You've already guessed that letter. \nYou "
+                  "have", num_warnings, "warnings left:")
 
     return num_guess, num_warnings
 
@@ -311,17 +323,17 @@ def hangman_game(secret_word: str, word_dict: dict, hint_choice: str) -> int:
                 continue
 
             num_guess, num_warnings = warnings_check(
-                secret_word, letters_guessed, user_letter, num_warnings,
+                letters_guessed, user_letter, num_warnings,
                 num_guess)
             continue
 
         elif user_letter in letters_guessed:
             num_guess, num_warnings = warnings_check(
-                secret_word, letters_guessed, user_letter, num_warnings,
+                letters_guessed, user_letter, num_warnings,
                 num_guess)
 
         elif user_letter not in secret_word:
-            print(f"Oops! That letter is not in my word: {guessed_word}")
+            print(f"\nOops! That letter is not in my word:")
             letters_guessed.append(user_letter)
             num_guess = num_guess - 2 if user_letter in VOWELS else \
                 num_guess - 1
@@ -329,16 +341,18 @@ def hangman_game(secret_word: str, word_dict: dict, hint_choice: str) -> int:
         elif user_letter in secret_word:
             letters_guessed.append(user_letter)
             guessed_word = get_guessed_word(secret_word, letters_guessed)
-            print(f"Good guess: {guessed_word}")
+            print(f"\nGood guess:")
 
             if is_word_guessed(secret_word, letters_guessed):
                 game_score = num_guess * len(set(secret_word))
                 total_score += game_score
+                display_hangman(num_guess, guessed_word)
                 print(f"{LINE_SEP}\nCongratulations, you won!")
                 print(f"Your score for this game is: {game_score}")
                 break
 
     if num_guess <= 0:
+        display_hangman(0, guessed_word, secret_word)
         print(f"{LINE_SEP}\nSorry, you ran out of guesses. The word was "
               f"{secret_word}.")
 
