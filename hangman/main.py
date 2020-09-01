@@ -17,7 +17,7 @@ def display_hangman(guess_rem: int, guessed: str) -> None:
                 fr"""
                     +------+
                     |      |
-                    |      
+                    |      o
                     |     \|/
                     |      |
                     |     / \
