@@ -1,5 +1,5 @@
 {
-  "2": [
+  "2a": [
     "aa",
     "ab",
     "ad",
@@ -15,15 +15,21 @@
     "at",
     "aw",
     "ax",
-    "ay",
+    "ay"
+  ],
+  "2b": [
     "ba",
     "be",
     "bi",
     "bo",
-    "by",
+    "by"
+  ],
+  "2d": [
     "da",
     "de",
-    "do",
+    "do"
+  ],
+  "2e": [
     "ed",
     "ef",
     "eh",
@@ -34,38 +40,58 @@
     "es",
     "et",
     "ew",
-    "ex",
+    "ex"
+  ],
+  "2f": [
     "fa",
-    "fe",
+    "fe"
+  ],
+  "2g": [
     "gi",
-    "go",
+    "go"
+  ],
+  "2h": [
     "ha",
     "he",
     "hi",
     "hm",
-    "ho",
+    "ho"
+  ],
+  "2i": [
     "id",
     "if",
     "in",
     "is",
-    "it",
-    "jo",
+    "it"
+  ],
+  "2j": [
+    "jo"
+  ],
+  "2k": [
     "ka",
-    "ki",
+    "ki"
+  ],
+  "2l": [
     "la",
     "li",
-    "lo",
+    "lo"
+  ],
+  "2m": [
     "ma",
     "me",
     "mi",
     "mm",
     "mo",
     "mu",
-    "my",
+    "my"
+  ],
+  "2n": [
     "na",
     "ne",
     "no",
-    "nu",
+    "nu"
+  ],
+  "2o": [
     "od",
     "oe",
     "of",
@@ -79,36 +105,58 @@
     "os",
     "ow",
     "ox",
-    "oy",
+    "oy"
+  ],
+  "2p": [
     "pa",
     "pe",
     "pi",
-    "po",
-    "qi",
-    "re",
+    "po"
+  ],
+  "2q": [
+    "qi"
+  ],
+  "2r": [
+    "re"
+  ],
+  "2s": [
     "sh",
     "si",
-    "so",
+    "so"
+  ],
+  "2t": [
     "ta",
     "te",
     "ti",
-    "to",
+    "to"
+  ],
+  "2u": [
     "uh",
     "um",
     "un",
     "up",
     "us",
-    "ut",
+    "ut"
+  ],
+  "2w": [
     "we",
-    "wo",
+    "wo"
+  ],
+  "2x": [
     "xi",
-    "xu",
+    "xu"
+  ],
+  "2y": [
     "ya",
     "ye",
-    "yo",
+    "yo"
+  ],
+  "2z": [
     "za"
   ],
-  "3": [
+  "2c": [],
+  "2v": [],
+  "3a": [
     "aah",
     "aal",
     "aas",
@@ -184,7 +232,9 @@
     "axe",
     "aye",
     "ays",
-    "azo",
+    "azo"
+  ],
+  "3b": [
     "baa",
     "bad",
     "bag",
@@ -237,7 +287,9 @@
     "but",
     "buy",
     "bye",
-    "bys",
+    "bys"
+  ],
+  "3c": [
     "cab",
     "cad",
     "caf",
@@ -278,7 +330,9 @@
     "cur",
     "cut",
     "cuz",
-    "cwm",
+    "cwm"
+  ],
+  "3d": [
     "dab",
     "dad",
     "dag",
@@ -333,7 +387,9 @@
     "dun",
     "duo",
     "dup",
-    "dye",
+    "dye"
+  ],
+  "3e": [
     "ear",
     "eat",
     "eau",
@@ -377,7 +433,9 @@
     "eth",
     "eve",
     "ewe",
-    "eye",
+    "eye"
+  ],
+  "3f": [
     "fab",
     "fad",
     "fag",
@@ -429,7 +487,9 @@
     "fud",
     "fug",
     "fun",
-    "fur",
+    "fur"
+  ],
+  "3g": [
     "gab",
     "gad",
     "gae",
@@ -476,7 +536,9 @@
     "guv",
     "guy",
     "gym",
-    "gyp",
+    "gyp"
+  ],
+  "3h": [
     "had",
     "hae",
     "hag",
@@ -527,7 +589,9 @@
     "hun",
     "hup",
     "hut",
-    "hyp",
+    "hyp"
+  ],
+  "3i": [
     "ice",
     "ich",
     "ick",
@@ -547,7 +611,9 @@
     "irk",
     "ism",
     "its",
-    "ivy",
+    "ivy"
+  ],
+  "3j": [
     "jab",
     "jag",
     "jam",
@@ -569,7 +635,9 @@
     "jug",
     "jun",
     "jus",
-    "jut",
+    "jut"
+  ],
+  "3k": [
     "kab",
     "kae",
     "kaf",
@@ -598,7 +666,9 @@
     "kor",
     "kos",
     "kue",
-    "kye",
+    "kye"
+  ],
+  "3l": [
     "lab",
     "lac",
     "lad",
@@ -644,7 +714,9 @@
     "lun",
     "luv",
     "lux",
-    "lye",
+    "lye"
+  ],
+  "3m": [
     "mac",
     "mad",
     "mae",
@@ -699,7 +771,9 @@
     "mus",
     "mut",
     "mux",
-    "myc",
+    "myc"
+  ],
+  "3n": [
     "nab",
     "nae",
     "nag",
@@ -736,7 +810,9 @@
     "nug",
     "nun",
     "nus",
-    "nut",
+    "nut"
+  ],
+  "3o": [
     "oaf",
     "oak",
     "oar",
@@ -791,7 +867,9 @@
     "own",
     "owt",
     "oxo",
-    "oxy",
+    "oxy"
+  ],
+  "3p": [
     "pac",
     "pad",
     "pah",
@@ -858,10 +936,14 @@
     "put",
     "pya",
     "pye",
-    "pyx",
+    "pyx"
+  ],
+  "3q": [
     "qat",
     "qis",
-    "qua",
+    "qua"
+  ],
+  "3r": [
     "rad",
     "rag",
     "rah",
@@ -914,7 +996,9 @@
     "rut",
     "rya",
     "rye",
-    "ryu",
+    "ryu"
+  ],
+  "3s": [
     "sab",
     "sac",
     "sad",
@@ -985,7 +1069,9 @@
     "sup",
     "suq",
     "sus",
-    "syn",
+    "syn"
+  ],
+  "3t": [
     "tab",
     "tad",
     "tae",
@@ -1047,7 +1133,9 @@
     "tux",
     "twa",
     "two",
-    "tye",
+    "tye"
+  ],
+  "3u": [
     "udo",
     "ugh",
     "uke",
@@ -1066,7 +1154,9 @@
     "use",
     "uta",
     "ute",
-    "uts",
+    "uts"
+  ],
+  "3v": [
     "vac",
     "van",
     "var",
@@ -1091,7 +1181,9 @@
     "vow",
     "vox",
     "vug",
-    "vum",
+    "vum"
+  ],
+  "3w": [
     "wab",
     "wad",
     "wae",
@@ -1127,8 +1219,12 @@
     "wry",
     "wud",
     "wye",
-    "wyn",
-    "xis",
+    "wyn"
+  ],
+  "3x": [
+    "xis"
+  ],
+  "3y": [
     "yag",
     "yah",
     "yak",
@@ -1156,7 +1252,9 @@
     "yow",
     "yuk",
     "yum",
-    "yup",
+    "yup"
+  ],
+  "3z": [
     "zag",
     "zap",
     "zas",
@@ -1175,7 +1273,7 @@
     "zuz",
     "zzz"
   ],
-  "4": [
+  "4a": [
     "aahs",
     "aals",
     "abas",
@@ -1378,7 +1476,9 @@
     "ayes",
     "ayin",
     "azan",
-    "azon",
+    "azon"
+  ],
+  "4b": [
     "baal",
     "baas",
     "baba",
@@ -1650,7 +1750,9 @@
     "byes",
     "byre",
     "byrl",
-    "byte",
+    "byte"
+  ],
+  "4c": [
     "cabs",
     "caca",
     "cade",
@@ -1896,7 +1998,9 @@
     "cyma",
     "cyme",
     "cyst",
-    "czar",
+    "czar"
+  ],
+  "4d": [
     "dabs",
     "dace",
     "dada",
@@ -2143,7 +2247,9 @@
     "dyer",
     "dyes",
     "dyke",
-    "dyne",
+    "dyne"
+  ],
+  "4e": [
     "each",
     "earl",
     "earn",
@@ -2254,7 +2360,9 @@
     "eyne",
     "eyra",
     "eyre",
-    "eyry",
+    "eyry"
+  ],
+  "4f": [
     "fabs",
     "face",
     "fact",
@@ -2451,7 +2559,9 @@
     "fuze",
     "fuzz",
     "fyce",
-    "fyke",
+    "fyke"
+  ],
+  "4g": [
     "gabs",
     "gaby",
     "gach",
@@ -2651,7 +2761,9 @@
     "gyre",
     "gyri",
     "gyro",
-    "gyve",
+    "gyve"
+  ],
+  "4h": [
     "haaf",
     "haar",
     "habu",
@@ -2848,7 +2960,9 @@
     "hype",
     "hypo",
     "hyps",
-    "hyte",
+    "hyte"
+  ],
+  "4i": [
     "iamb",
     "ibex",
     "ibis",
@@ -2908,7 +3022,9 @@
     "item",
     "iwis",
     "ixia",
-    "izar",
+    "izar"
+  ],
+  "4j": [
     "jabs",
     "jack",
     "jade",
@@ -2998,7 +3114,9 @@
     "jury",
     "just",
     "jute",
-    "juts",
+    "juts"
+  ],
+  "4k": [
     "kaas",
     "kabs",
     "kadi",
@@ -3131,7 +3249,9 @@
     "kyar",
     "kyat",
     "kyes",
-    "kyte",
+    "kyte"
+  ],
+  "4l": [
     "labs",
     "lace",
     "lack",
@@ -3355,7 +3475,9 @@
     "lyes",
     "lynx",
     "lyre",
-    "lyse",
+    "lyse"
+  ],
+  "4m": [
     "maar",
     "mabe",
     "mace",
@@ -3580,7 +3702,9 @@
     "mutt",
     "mycs",
     "myna",
-    "myth",
+    "myth"
+  ],
+  "4n": [
     "naan",
     "nabe",
     "nabs",
@@ -3698,7 +3822,9 @@
     "nurd",
     "nurl",
     "nuts",
-    "nyah",
+    "nyah"
+  ],
+  "4o": [
     "oafs",
     "oaks",
     "oaky",
@@ -3821,7 +3947,9 @@
     "oxim",
     "oyer",
     "oyes",
-    "oyez",
+    "oyez"
+  ],
+  "4p": [
     "paan",
     "paca",
     "pace",
@@ -4097,7 +4225,9 @@
     "pyic",
     "pyin",
     "pyre",
-    "pyro",
+    "pyro"
+  ],
+  "4q": [
     "qadi",
     "qaid",
     "qats",
@@ -4112,7 +4242,9 @@
     "quip",
     "quit",
     "quiz",
-    "quod",
+    "quod"
+  ],
+  "4r": [
     "race",
     "rack",
     "racy",
@@ -4301,7 +4433,9 @@
     "ryke",
     "rynd",
     "ryot",
-    "ryus",
+    "ryus"
+  ],
+  "4s": [
     "sabe",
     "sabs",
     "sack",
@@ -4672,7 +4806,9 @@
     "syli",
     "sync",
     "syne",
-    "syph",
+    "syph"
+  ],
+  "4t": [
     "tabs",
     "tabu",
     "tace",
@@ -4938,7 +5074,9 @@
     "typy",
     "tyre",
     "tyro",
-    "tzar",
+    "tzar"
+  ],
+  "4u": [
     "udon",
     "udos",
     "ughs",
@@ -4981,7 +5119,9 @@
     "uses",
     "utas",
     "utes",
-    "uvea",
+    "uvea"
+  ],
+  "4v": [
     "vacs",
     "vagi",
     "vail",
@@ -5065,7 +5205,9 @@
     "vugg",
     "vugh",
     "vugs",
-    "vuln",
+    "vuln"
+  ],
+  "4w": [
     "waah",
     "wabs",
     "wack",
@@ -5234,8 +5376,12 @@
     "wynd",
     "wynn",
     "wyns",
-    "wyte",
-    "xyst",
+    "wyte"
+  ],
+  "4x": [
+    "xyst"
+  ],
+  "4y": [
     "yack",
     "yaff",
     "yage",
@@ -5314,7 +5460,9 @@
     "yurt",
     "yutz",
     "yuzu",
-    "ywis",
+    "ywis"
+  ],
+  "4z": [
     "zags",
     "zany",
     "zaps",
@@ -5353,7 +5501,7 @@
     "zouk",
     "zyme"
   ],
-  "5": [
+  "5a": [
     "aahed",
     "aalii",
     "aargh",
@@ -5887,7 +6035,9 @@
     "azote",
     "azoth",
     "azuki",
-    "azure",
+    "azure"
+  ],
+  "5b": [
     "baaed",
     "baals",
     "babas",
@@ -6534,7 +6684,9 @@
     "byrls",
     "byssi",
     "bytes",
-    "byway",
+    "byway"
+  ],
+  "5c": [
     "cabal",
     "cabby",
     "caber",
@@ -7242,7 +7394,9 @@
     "cynic",
     "cysts",
     "cyton",
-    "czars",
+    "czars"
+  ],
+  "5d": [
     "daces",
     "dacha",
     "dadas",
@@ -7726,7 +7880,9 @@
     "dyked",
     "dykes",
     "dynel",
-    "dynes",
+    "dynes"
+  ],
+  "5e": [
     "eager",
     "eagle",
     "eagre",
@@ -7936,7 +8092,9 @@
     "eyras",
     "eyres",
     "eyrie",
-    "eyrir",
+    "eyrir"
+  ],
+  "5f": [
     "fable",
     "faced",
     "facer",
@@ -8383,7 +8541,9 @@
     "fuzzy",
     "fyces",
     "fykes",
-    "fytte",
+    "fytte"
+  ],
+  "5g": [
     "gabba",
     "gabby",
     "gable",
@@ -8835,7 +8995,9 @@
     "gyros",
     "gyrus",
     "gyved",
-    "gyves",
+    "gyves"
+  ],
+  "5h": [
     "haafs",
     "haars",
     "habit",
@@ -9195,7 +9357,9 @@
     "hypha",
     "hypos",
     "hyrax",
-    "hyson",
+    "hyson"
+  ],
+  "5i": [
     "iambi",
     "iambs",
     "ichor",
@@ -9320,7 +9484,9 @@
     "ixora",
     "ixtle",
     "izard",
-    "izars",
+    "izars"
+  ],
+  "5j": [
     "jabot",
     "jacal",
     "jacks",
@@ -9465,7 +9631,9 @@
     "justs",
     "jutes",
     "jutty",
-    "juvie",
+    "juvie"
+  ],
+  "5k": [
     "kabab",
     "kabar",
     "kabob",
@@ -9703,7 +9871,9 @@
     "kylix",
     "kyrie",
     "kytes",
-    "kythe",
+    "kythe"
+  ],
+  "5l": [
     "laari",
     "label",
     "labia",
@@ -10133,7 +10303,9 @@
     "lysis",
     "lyssa",
     "lytic",
-    "lytta",
+    "lytta"
+  ],
+  "5m": [
     "maars",
     "mabes",
     "macaw",
@@ -10617,7 +10789,9 @@
     "myrrh",
     "mysid",
     "myths",
-    "mythy",
+    "mythy"
+  ],
+  "5n": [
     "naans",
     "nabes",
     "nabis",
@@ -10837,7 +11011,9 @@
     "nutty",
     "nyala",
     "nylon",
-    "nymph",
+    "nymph"
+  ],
+  "5o": [
     "oaked",
     "oaken",
     "oakum",
@@ -11030,7 +11206,9 @@
     "oxlip",
     "oxter",
     "oyers",
-    "ozone",
+    "ozone"
+  ],
+  "5p": [
     "paans",
     "pacas",
     "paced",
@@ -11646,7 +11824,9 @@
     "pyxes",
     "pyxie",
     "pyxis",
-    "pzazz",
+    "pzazz"
+  ],
+  "5q": [
     "qadis",
     "qaids",
     "qajaq",
@@ -11705,7 +11885,9 @@
     "quota",
     "quote",
     "quoth",
-    "qursh",
+    "qursh"
+  ],
+  "5r": [
     "rabat",
     "rabbi",
     "rabic",
@@ -12158,7 +12340,9 @@
     "ryked",
     "rykes",
     "rynds",
-    "ryots",
+    "ryots"
+  ],
+  "5s": [
     "sabal",
     "sabed",
     "saber",
@@ -13270,7 +13454,9 @@
     "syphs",
     "syren",
     "syrup",
-    "sysop",
+    "sysop"
+  ],
+  "5t": [
     "tabby",
     "taber",
     "tabes",
@@ -13872,7 +14058,9 @@
     "tyres",
     "tyros",
     "tythe",
-    "tzars",
+    "tzars"
+  ],
+  "5u": [
     "udder",
     "udons",
     "uhlan",
@@ -14004,7 +14192,9 @@
     "utter",
     "uveal",
     "uveas",
-    "uvula",
+    "uvula"
+  ],
+  "5v": [
     "vacua",
     "vagal",
     "vague",
@@ -14182,7 +14372,9 @@
     "vulgo",
     "vulns",
     "vulva",
-    "vying",
+    "vying"
+  ],
+  "5w": [
     "wacke",
     "wacko",
     "wacks",
@@ -14493,7 +14685,9 @@
     "wynds",
     "wynns",
     "wyted",
-    "wytes",
+    "wytes"
+  ],
+  "5x": [
     "xebec",
     "xenia",
     "xenic",
@@ -14506,7 +14700,9 @@
     "xylol",
     "xylyl",
     "xysti",
-    "xysts",
+    "xysts"
+  ],
+  "5y": [
     "yabby",
     "yacht",
     "yacks",
@@ -14618,7 +14814,9 @@
     "yuppy",
     "yurta",
     "yurts",
-    "yuzus",
+    "yuzus"
+  ],
+  "5z": [
     "zaida",
     "zaidy",
     "zaire",
@@ -14685,7 +14883,7 @@
     "zuzim",
     "zymes"
   ],
-  "6": [
+  "6a": [
     "aahing",
     "aaliis",
     "aarrgh",
@@ -15582,7 +15780,9 @@
     "azotic",
     "azukis",
     "azures",
-    "azygos",
+    "azygos"
+  ],
+  "6b": [
     "baaing",
     "baalim",
     "baases",
@@ -16747,7 +16947,9 @@
     "byways",
     "byword",
     "bywork",
-    "byzant",
+    "byzant"
+  ],
+  "6c": [
     "cabala",
     "cabals",
     "cabana",
@@ -18124,7 +18326,9 @@
     "cypres",
     "cyprus",
     "cystic",
-    "cytons",
+    "cytons"
+  ],
+  "6d": [
     "dabbed",
     "dabber",
     "dabble",
@@ -18997,7 +19201,9 @@
     "dynein",
     "dynels",
     "dynode",
-    "dyvour",
+    "dyvour"
+  ],
+  "6e": [
     "eagers",
     "eagled",
     "eagles",
@@ -19476,7 +19682,9 @@
     "eyeing",
     "eyelet",
     "eyelid",
-    "eyries",
+    "eyries"
+  ],
+  "6f": [
     "fabber",
     "fabled",
     "fabler",
@@ -20211,7 +20419,9 @@
     "fuzzes",
     "fylfot",
     "fynbos",
-    "fyttes",
+    "fyttes"
+  ],
+  "6g": [
     "gabbas",
     "gabbed",
     "gabber",
@@ -20938,7 +21148,9 @@
     "gyrons",
     "gyrose",
     "gyttja",
-    "gyving",
+    "gyving"
+  ],
+  "6h": [
     "habile",
     "habits",
     "haboob",
@@ -21548,7 +21760,9 @@
     "hypoed",
     "hypoid",
     "hysons",
-    "hyssop",
+    "hyssop"
+  ],
+  "6i": [
     "iambic",
     "iambus",
     "iatric",
@@ -21850,7 +22064,9 @@
     "ixoras",
     "ixtles",
     "izards",
-    "izzard",
+    "izzard"
+  ],
+  "6j": [
     "jabbed",
     "jabber",
     "jabiru",
@@ -22081,7 +22297,9 @@
     "justle",
     "justly",
     "jutted",
-    "juvies",
+    "juvies"
+  ],
+  "6k": [
     "kababs",
     "kabaka",
     "kabala",
@@ -22403,7 +22621,9 @@
     "kylins",
     "kyries",
     "kythed",
-    "kythes",
+    "kythes"
+  ],
+  "6l": [
     "laager",
     "laaris",
     "labara",
@@ -23088,7 +23308,9 @@
     "lysins",
     "lyssas",
     "lyttae",
-    "lyttas",
+    "lyttas"
+  ],
+  "6m": [
     "macaco",
     "macaws",
     "macers",
@@ -23949,7 +24171,9 @@
     "mythoi",
     "mythos",
     "myxoid",
-    "myxoma",
+    "myxoma"
+  ],
+  "6n": [
     "nabbed",
     "nabber",
     "nabobs",
@@ -24278,7 +24502,9 @@
     "nylons",
     "nympha",
     "nympho",
-    "nymphs",
+    "nymphs"
+  ],
+  "6o": [
     "oafish",
     "oakier",
     "oakums",
@@ -24630,7 +24856,9 @@
     "oyezes",
     "oyster",
     "ozones",
-    "ozonic",
+    "ozonic"
+  ],
+  "6p": [
     "pablum",
     "pacers",
     "pachas",
@@ -25769,7 +25997,9 @@
     "pyrrol",
     "python",
     "pyuria",
-    "pyxies",
+    "pyxies"
+  ],
+  "6q": [
     "qabala",
     "qajaqs",
     "qanats",
@@ -25863,7 +26093,9 @@
     "quotes",
     "quotha",
     "qurush",
-    "qwerty",
+    "qwerty"
+  ],
+  "6r": [
     "rabato",
     "rabats",
     "rabbet",
@@ -26863,7 +27095,9 @@
     "rutins",
     "rutted",
     "ryking",
-    "ryokan",
+    "ryokan"
+  ],
+  "6s": [
     "sabals",
     "sabbat",
     "sabbed",
@@ -28805,7 +29039,9 @@
     "syrupy",
     "sysops",
     "system",
-    "syzygy",
+    "syzygy"
+  ],
+  "6t": [
     "tabard",
     "tabbed",
     "tabbis",
@@ -29782,7 +30018,9 @@
     "tythed",
     "tythes",
     "tzetze",
-    "tzuris",
+    "tzuris"
+  ],
+  "6u": [
     "uakari",
     "ubiety",
     "ubique",
@@ -30154,7 +30392,9 @@
     "uveous",
     "uvulae",
     "uvular",
-    "uvulas",
+    "uvulas"
+  ],
+  "6v": [
     "vacant",
     "vacate",
     "vacuum",
@@ -30457,7 +30697,9 @@
     "vulvae",
     "vulval",
     "vulvar",
-    "vulvas",
+    "vulvas"
+  ],
+  "6w": [
     "wabble",
     "wabbly",
     "wacked",
@@ -30942,7 +31184,9 @@
     "wyches",
     "wyling",
     "wyting",
-    "wyvern",
+    "wyvern"
+  ],
+  "6x": [
     "xebecs",
     "xenial",
     "xenias",
@@ -30957,7 +31201,9 @@
     "xyster",
     "xystoi",
     "xystos",
-    "xystus",
+    "xystus"
+  ],
+  "6y": [
     "yabber",
     "yabbie",
     "yachts",
@@ -31068,7 +31314,9 @@
     "yulans",
     "yupons",
     "yuppie",
-    "yutzes",
+    "yutzes"
+  ],
+  "6z": [
     "zaddik",
     "zaffar",
     "zaffer",
@@ -31167,7 +31415,7 @@
     "zygote",
     "zymase"
   ],
-  "7": [
+  "7a": [
     "aarrghh",
     "abalone",
     "abandon",
@@ -32512,7 +32760,9 @@
     "azotize",
     "azulejo",
     "azurite",
-    "azygous",
+    "azygous"
+  ],
+  "7b": [
     "baalism",
     "baaskap",
     "babacus",
@@ -34287,7 +34537,9 @@
     "bytalks",
     "bywords",
     "byworks",
-    "byzants",
+    "byzants"
+  ],
+  "7c": [
     "cabalas",
     "cabanas",
     "cabaret",
@@ -36495,7 +36747,9 @@
     "czardom",
     "czarina",
     "czarism",
-    "czarist",
+    "czarist"
+  ],
+  "7d": [
     "dabbers",
     "dabbing",
     "dabbled",
@@ -37844,7 +38098,9 @@
     "dyspnea",
     "dysuria",
     "dysuric",
-    "dyvours",
+    "dyvours"
+  ],
+  "7e": [
     "eagerer",
     "eagerly",
     "eaglets",
@@ -38700,7 +38956,9 @@
     "eyespot",
     "eyewash",
     "eyewear",
-    "eyewink",
+    "eyewink"
+  ],
+  "7f": [
     "fabbest",
     "fablers",
     "fabliau",
@@ -39798,7 +40056,9 @@
     "fuzzier",
     "fuzzily",
     "fuzzing",
-    "fylfots",
+    "fylfots"
+  ],
+  "7g": [
     "gabbard",
     "gabbart",
     "gabbers",
@@ -40847,7 +41107,9 @@
     "gyrates",
     "gyrator",
     "gyrenes",
-    "gyttjas",
+    "gyttjas"
+  ],
+  "7h": [
     "habitan",
     "habitat",
     "habited",
@@ -41769,7 +42031,9 @@
     "hypoxic",
     "hyraces",
     "hyraxes",
-    "hyssops",
+    "hyssops"
+  ],
+  "7i": [
     "iambics",
     "iceberg",
     "iceboat",
@@ -42303,7 +42567,9 @@
     "ivories",
     "ivylike",
     "ixodids",
-    "izzards",
+    "izzards"
+  ],
+  "7j": [
     "jabbers",
     "jabbing",
     "jabirus",
@@ -42628,7 +42894,9 @@
     "juttied",
     "jutties",
     "jutting",
-    "juvenal",
+    "juvenal"
+  ],
+  "7k": [
     "kabaddi",
     "kabakas",
     "kabalas",
@@ -42998,7 +43266,9 @@
     "kyanize",
     "kylikes",
     "kylixes",
-    "kything",
+    "kything"
+  ],
+  "7l": [
     "laagers",
     "labarum",
     "labeled",
@@ -43888,7 +44158,9 @@
     "lyrists",
     "lysates",
     "lysines",
-    "lysogen",
+    "lysogen"
+  ],
+  "7m": [
     "macaber",
     "macabre",
     "macacos",
@@ -45230,7 +45502,9 @@
     "mystics",
     "mystify",
     "mythier",
-    "myxomas",
+    "myxomas"
+  ],
+  "7n": [
     "nabbers",
     "nabbing",
     "nacelle",
@@ -45743,7 +46017,9 @@
     "nymphal",
     "nymphed",
     "nymphet",
-    "nymphos",
+    "nymphos"
+  ],
+  "7o": [
     "oakiest",
     "oaklike",
     "oakmoss",
@@ -46405,7 +46681,9 @@
     "ozonide",
     "ozonise",
     "ozonize",
-    "ozonous",
+    "ozonous"
+  ],
+  "7p": [
     "pablums",
     "pabular",
     "pabulum",
@@ -48332,7 +48610,9 @@
     "pyurias",
     "pyxides",
     "pyxidia",
-    "pzazzes",
+    "pzazzes"
+  ],
+  "7q": [
     "qabalah",
     "qabalas",
     "qamutik",
@@ -48471,7 +48751,9 @@
     "quoters",
     "quoting",
     "qurshes",
-    "qwertys",
+    "qwertys"
+  ],
+  "7r": [
     "rabaska",
     "rabatos",
     "rabbets",
@@ -49953,7 +50235,9 @@
     "ruttily",
     "rutting",
     "ruttish",
-    "ryokans",
+    "ryokans"
+  ],
+  "7s": [
     "sabaton",
     "sabayon",
     "sabbath",
@@ -52838,7 +53122,9 @@
     "syruped",
     "systems",
     "systole",
-    "syzygal",
+    "syzygal"
+  ],
+  "7t": [
     "tabanid",
     "tabards",
     "tabaret",
@@ -54299,7 +54585,9 @@
     "tzigane",
     "tzimmes",
     "tzitzis",
-    "tzitzit",
+    "tzitzit"
+  ],
+  "7u": [
     "uakaris",
     "uddered",
     "ufology",
@@ -54881,7 +55169,9 @@
     "uveitic",
     "uveitis",
     "uvulars",
-    "uxorial",
+    "uxorial"
+  ],
+  "7v": [
     "vacancy",
     "vacated",
     "vacates",
@@ -55286,7 +55576,9 @@
     "vulpine",
     "vulture",
     "vulvate",
-    "vyingly",
+    "vyingly"
+  ],
+  "7w": [
     "wabbled",
     "wabbler",
     "wabbles",
@@ -56034,7 +56326,9 @@
     "wussies",
     "wuthers",
     "wysiwyg",
-    "wyverns",
+    "wyverns"
+  ],
+  "7x": [
     "xanthan",
     "xanthic",
     "xanthin",
@@ -56051,7 +56345,9 @@
     "xylidin",
     "xylitol",
     "xyloses",
-    "xysters",
+    "xysters"
+  ],
+  "7y": [
     "yabbers",
     "yabbies",
     "yachted",
@@ -56158,7 +56454,9 @@
     "yummier",
     "yummies",
     "yuppies",
-    "yuppify",
+    "yuppify"
+  ],
+  "7z": [
     "zacaton",
     "zaddick",
     "zaffars",
@@ -56302,7 +56600,7 @@
     "zymurgy",
     "zyzzyva"
   ],
-  "8": [
+  "8a": [
     "aardvark",
     "aardwolf",
     "aasvogel",
@@ -58032,7 +58330,9 @@
     "azoturia",
     "azulejos",
     "azurites",
-    "azygoses",
+    "azygoses"
+  ],
+  "8b": [
     "baalisms",
     "baaskaap",
     "baaskaps",
@@ -60090,7 +60390,9 @@
     "bypassed",
     "bypasses",
     "byssuses",
-    "bystreet",
+    "bystreet"
+  ],
+  "8c": [
     "cabalism",
     "cabalist",
     "caballed",
@@ -62979,7 +63281,9 @@
     "czarinas",
     "czarisms",
     "czarists",
-    "czaritza",
+    "czaritza"
+  ],
+  "8d": [
     "dabblers",
     "dabbling",
     "dabchick",
@@ -64689,7 +64993,9 @@
     "dystonia",
     "dystonic",
     "dystopia",
-    "dysurias",
+    "dysurias"
+  ],
+  "8e": [
     "eagerest",
     "eanlings",
     "earaches",
@@ -65895,7 +66201,9 @@
     "eyeteeth",
     "eyetooth",
     "eyewater",
-    "eyewinks",
+    "eyewinks"
+  ],
+  "8f": [
     "fabliaux",
     "fabrique",
     "fabulate",
@@ -67335,7 +67643,9 @@
     "fuzeless",
     "fuzzball",
     "fuzziest",
-    "fuzztone",
+    "fuzztone"
+  ],
+  "8g": [
     "gabbards",
     "gabbarts",
     "gabbiest",
@@ -68448,7 +68758,9 @@
     "gyrators",
     "gyratory",
     "gyroidal",
-    "gyrostat",
+    "gyrostat"
+  ],
+  "8h": [
     "habanera",
     "habanero",
     "habdalah",
@@ -69538,7 +69850,9 @@
     "hypoxias",
     "hyracoid",
     "hysteria",
-    "hysteric",
+    "hysteric"
+  ],
+  "8i": [
     "iambuses",
     "iatrical",
     "ibogaine",
@@ -70314,7 +70628,9 @@
     "itemizes",
     "iterance",
     "iterated",
-    "iterates",
+    "iterates"
+  ],
+  "8j": [
     "jabbered",
     "jabberer",
     "jacamars",
@@ -70552,7 +70868,9 @@
     "jutelike",
     "juttying",
     "juvenals",
-    "juvenile",
+    "juvenile"
+  ],
+  "8k": [
     "kabaddis",
     "kabalism",
     "kabalist",
@@ -70918,7 +71236,9 @@
     "kymogram",
     "kyphoses",
     "kyphosis",
-    "kyphotic",
+    "kyphotic"
+  ],
+  "8l": [
     "laagered",
     "labarums",
     "labdanum",
@@ -71919,7 +72239,9 @@
     "lysogens",
     "lysogeny",
     "lysosome",
-    "lysozyme",
+    "lysozyme"
+  ],
+  "8m": [
     "macadams",
     "macaques",
     "macaroni",
@@ -73554,7 +73876,9 @@
     "myxameba",
     "myxedema",
     "myxocyte",
-    "myxomata",
+    "myxomata"
+  ],
+  "8n": [
     "nabobery",
     "nabobess",
     "nabobish",
@@ -74165,7 +74489,9 @@
     "nymphean",
     "nymphets",
     "nymphing",
-    "nystatin",
+    "nystatin"
+  ],
+  "8o": [
     "oafishly",
     "oakiness",
     "oarlocks",
@@ -75212,7 +75538,9 @@
     "ozonises",
     "ozonized",
     "ozonizer",
-    "ozonizes",
+    "ozonizes"
+  ],
+  "8p": [
     "pabulums",
     "pachadom",
     "pachalic",
@@ -77634,7 +77962,9 @@
     "pyrrolic",
     "pyruvate",
     "pythonic",
-    "pyxidium",
+    "pyxidium"
+  ],
+  "8q": [
     "qabalahs",
     "qamutiks",
     "qawwalis",
@@ -77806,7 +78136,9 @@
     "quotable",
     "quotably",
     "quotient",
-    "qurushes",
+    "qurushes"
+  ],
+  "8r": [
     "rabaskas",
     "rabbeted",
     "rabbinic",
@@ -79623,7 +79955,9 @@
     "ruthless",
     "rutilant",
     "ruttiest",
-    "ryegrass",
+    "ryegrass"
+  ],
+  "8s": [
     "sabatons",
     "sabayons",
     "sabbaths",
@@ -83477,7 +83811,9 @@
     "systoles",
     "systolic",
     "syzygial",
-    "syzygies",
+    "syzygies"
+  ],
+  "8t": [
     "tabanids",
     "tabarded",
     "tabarets",
@@ -85179,7 +85515,9 @@
     "tzedakah",
     "tziganes",
     "tzitzith",
-    "tzurises",
+    "tzurises"
+  ],
+  "8u": [
     "ubieties",
     "ubiquity",
     "udometer",
@@ -86095,7 +86433,9 @@
     "uttering",
     "uvularly",
     "uvulitis",
-    "uxorious",
+    "uxorious"
+  ],
+  "8v": [
     "vacantly",
     "vacating",
     "vacation",
@@ -86629,7 +86969,9 @@
     "vulgates",
     "vulguses",
     "vultures",
-    "vulvitis",
+    "vulvitis"
+  ],
+  "8w": [
     "wabblers",
     "wabblier",
     "wabbling",
@@ -87454,7 +87796,9 @@
     "wrynecks",
     "wurtzite",
     "wussiest",
-    "wuthered",
+    "wuthered"
+  ],
+  "8x": [
     "xanthans",
     "xanthate",
     "xanthein",
@@ -87475,7 +87819,9 @@
     "xylidins",
     "xylitols",
     "xylocarp",
-    "xylotomy",
+    "xylotomy"
+  ],
+  "8y": [
     "yabbered",
     "yachters",
     "yachties",
@@ -87562,7 +87908,9 @@
     "yukkiest",
     "yuletide",
     "yummiest",
-    "yuppydom",
+    "yuppydom"
+  ],
+  "8z": [
     "zabaione",
     "zabajone",
     "zacatons",
@@ -87663,7 +88011,7 @@
     "zymosans",
     "zyzzyvas"
   ],
-  "9": [
+  "9a": [
     "aardvarks",
     "aasvogels",
     "abamperes",
@@ -89295,7 +89643,9 @@
     "azotemias",
     "azotising",
     "azotizing",
-    "azoturias",
+    "azoturias"
+  ],
+  "9b": [
     "baaskaaps",
     "baasskaps",
     "babbitted",
@@ -90865,7 +91215,9 @@
     "bycatches",
     "bypassing",
     "bystander",
-    "bystreets",
+    "bystreets"
+  ],
+  "9c": [
     "cabaletta",
     "cabalisms",
     "cabalists",
@@ -93384,7 +93736,9 @@
     "cytotoxin",
     "czardases",
     "czarevnas",
-    "czaritzas",
+    "czaritzas"
+  ],
+  "9d": [
     "dabblings",
     "dabchicks",
     "dachshund",
@@ -94996,7 +95350,9 @@
     "dystonias",
     "dystopian",
     "dystopias",
-    "dystrophy",
+    "dystrophy"
+  ],
+  "9e": [
     "eagerness",
     "eaglewood",
     "ealdorman",
@@ -96173,7 +96529,9 @@
     "eyestones",
     "eyestrain",
     "eyewashes",
-    "eyewaters",
+    "eyewaters"
+  ],
+  "9f": [
     "fabricant",
     "fabricate",
     "fabriques",
@@ -97277,7 +97635,9 @@
     "futurists",
     "fuzzballs",
     "fuzziness",
-    "fuzztones",
+    "fuzztones"
+  ],
+  "9g": [
     "gabardine",
     "gaberdine",
     "gadabouts",
@@ -98083,7 +98443,9 @@
     "gyrfalcon",
     "gyroplane",
     "gyroscope",
-    "gyrostats",
+    "gyrostats"
+  ],
+  "9h": [
     "habaneras",
     "habaneros",
     "habdalahs",
@@ -98996,7 +99358,9 @@
     "hyracoids",
     "hysterias",
     "hysterics",
-    "hysteroid",
+    "hysteroid"
+  ],
+  "9i": [
     "ibogaines",
     "ibuprofen",
     "iceblinks",
@@ -99881,7 +100245,9 @@
     "itinerant",
     "itinerary",
     "itinerate",
-    "ivorybill",
+    "ivorybill"
+  ],
+  "9j": [
     "jabberers",
     "jabbering",
     "jaborandi",
@@ -100059,7 +100425,9 @@
     "justifies",
     "juveniles",
     "juvenilia",
-    "juxtapose",
+    "juxtapose"
+  ],
+  "9k": [
     "kabalisms",
     "kabalists",
     "kabbalahs",
@@ -100295,7 +100663,9 @@
     "kyanizing",
     "kyboshing",
     "kymograms",
-    "kymograph",
+    "kymograph"
+  ],
+  "9l": [
     "laagering",
     "labdanums",
     "labelable",
@@ -101050,7 +101420,9 @@
     "lysosomal",
     "lysosomes",
     "lysozymes",
-    "lytically",
+    "lytically"
+  ],
+  "9m": [
     "macadamia",
     "macaronic",
     "macaronis",
@@ -102503,7 +102875,9 @@
     "myxedemas",
     "myxocytes",
     "myxoviral",
-    "myxovirus",
+    "myxovirus"
+  ],
+  "9n": [
     "nabobisms",
     "naethings",
     "naggingly",
@@ -103078,7 +103452,9 @@
     "nymphette",
     "nystagmic",
     "nystagmus",
-    "nystatins",
+    "nystatins"
+  ],
+  "9o": [
     "oakmosses",
     "oarfishes",
     "oarswoman",
@@ -104044,7 +104420,9 @@
     "ozonation",
     "ozonising",
     "ozonizers",
-    "ozonizing",
+    "ozonizing"
+  ],
+  "9p": [
     "pacemaker",
     "pachadoms",
     "pachalics",
@@ -106211,7 +106589,9 @@
     "pyroxenic",
     "pyroxylin",
     "pyruvates",
-    "pythoness",
+    "pythoness"
+  ],
+  "9q": [
     "quaaludes",
     "quackiest",
     "quackisms",
@@ -106332,7 +106712,9 @@
     "quotation",
     "quotative",
     "quotidian",
-    "quotients",
+    "quotients"
+  ],
+  "9r": [
     "rabbeting",
     "rabbinate",
     "rabbinism",
@@ -107969,7 +108351,9 @@
     "rutabagas",
     "ruthenium",
     "ruthfully",
-    "ruttishly",
+    "ruttishly"
+  ],
+  "9s": [
     "sabadilla",
     "sabbatics",
     "sablefish",
@@ -111095,7 +111479,9 @@
     "sysadmins",
     "systaltic",
     "systemics",
-    "systemize",
+    "systemize"
+  ],
+  "9t": [
     "tabbouleh",
     "tablature",
     "tablefuls",
@@ -112380,7 +112766,9 @@
     "tzarevnas",
     "tzaritzas",
     "tzatzikis",
-    "tzedakahs",
+    "tzedakahs"
+  ],
+  "9u": [
     "udometers",
     "ufologies",
     "ufologist",
@@ -113159,7 +113547,9 @@
     "uttermost",
     "uvarovite",
     "uveitises",
-    "uxoricide",
+    "uxoricide"
+  ],
+  "9v": [
     "vacancies",
     "vacations",
     "vaccinate",
@@ -113598,7 +113988,9 @@
     "vulnerary",
     "vulturine",
     "vulturish",
-    "vulturous",
+    "vulturous"
+  ],
+  "9w": [
     "wabbliest",
     "wackiness",
     "waenesses",
@@ -114166,7 +114558,9 @@
     "wurtzites",
     "wuthering",
     "wyandotte",
-    "wyliecoat",
+    "wyliecoat"
+  ],
+  "9x": [
     "xanthates",
     "xantheins",
     "xanthenes",
@@ -114186,7 +114580,9 @@
     "xylidines",
     "xylocarps",
     "xylograph",
-    "xylophone",
+    "xylophone"
+  ],
+  "9y": [
     "yabbering",
     "yachtings",
     "yachtsman",
@@ -114242,7 +114638,9 @@
     "yuppieish",
     "yuppified",
     "yuppifies",
-    "yuppydoms",
+    "yuppydoms"
+  ],
+  "9z": [
     "zabaiones",
     "zabajones",
     "zamindari",
@@ -114313,7 +114711,7 @@
     "zymograms",
     "zymurgies"
   ],
-  "10": [
+  "10a": [
     "aardwolves",
     "abacterial",
     "abandoners",
@@ -115622,7 +116020,9 @@
     "axoplasmic",
     "ayahuascas",
     "ayatollahs",
-    "azeotropes",
+    "azeotropes"
+  ],
+  "10b": [
     "babbitries",
     "babbitting",
     "babblement",
@@ -116636,7 +117036,9 @@
     "butylation",
     "byssinoses",
     "byssinosis",
-    "bystanders",
+    "bystanders"
+  ],
+  "10c": [
     "cabalettas",
     "caballeros",
     "cabdrivers",
@@ -118675,7 +119077,9 @@
     "cytoplasms",
     "cytostatic",
     "cytotoxins",
-    "czarevitch",
+    "czarevitch"
+  ],
+  "10d": [
     "dachshunds",
     "daftnesses",
     "daggerlike",
@@ -119946,7 +120350,9 @@
     "dysprosium",
     "dysthymias",
     "dystrophic",
-    "dystrophin",
+    "dystrophin"
+  ],
+  "10e": [
     "earlywoods",
     "earmarking",
     "earthbound",
@@ -120929,7 +121335,9 @@
     "eyepoppers",
     "eyestrains",
     "eyestrings",
-    "eyewitness",
+    "eyewitness"
+  ],
+  "10f": [
     "fabricants",
     "fabricated",
     "fabricates",
@@ -121700,7 +122108,9 @@
     "futureless",
     "futuristic",
     "futurities",
-    "futurology",
+    "futurology"
+  ],
+  "10g": [
     "gabardines",
     "gaberdines",
     "gadgeteers",
@@ -122267,7 +122677,9 @@
     "gyrfalcons",
     "gyroplanes",
     "gyroscopes",
-    "gyroscopic",
+    "gyroscopic"
+  ],
+  "10h": [
     "habergeons",
     "habiliment",
     "habilitate",
@@ -122985,7 +123397,9 @@
     "hystereses",
     "hysteresis",
     "hysteretic",
-    "hysterical",
+    "hysterical"
+  ],
+  "10i": [
     "iatrogenic",
     "ibuprofens",
     "iceboaters",
@@ -123922,7 +124336,9 @@
     "itinerated",
     "itinerates",
     "ivermectin",
-    "ivorybills",
+    "ivorybills"
+  ],
+  "10j": [
     "jaborandis",
     "jaboticaba",
     "jacarandas",
@@ -124037,7 +124453,9 @@
     "justnesses",
     "juvenility",
     "juxtaposed",
-    "juxtaposes",
+    "juxtaposes"
+  ],
+  "10k": [
     "kabbalisms",
     "kairomones",
     "kaiserdoms",
@@ -124153,7 +124571,9 @@
     "kurtosises",
     "kvetchiest",
     "kymographs",
-    "kymography",
+    "kymography"
+  ],
+  "10l": [
     "labialized",
     "labializes",
     "labilities",
@@ -124656,7 +125076,9 @@
     "lysimetric",
     "lysogenies",
     "lysogenise",
-    "lysogenize",
+    "lysogenize"
+  ],
+  "10m": [
     "macadamize",
     "macaronics",
     "macaronies",
@@ -125925,7 +126347,9 @@
     "mythopoeia",
     "mythopoeic",
     "myxomatous",
-    "myxomycete",
+    "myxomycete"
+  ],
+  "10n": [
     "naboberies",
     "nabobesses",
     "naffnesses",
@@ -126417,7 +126841,9 @@
     "nyctalopia",
     "nymphalids",
     "nymphettes",
-    "nympholept",
+    "nympholept"
+  ],
+  "10o": [
     "oafishness",
     "oakinesses",
     "oasthouses",
@@ -127223,7 +127649,9 @@
     "oysterings",
     "ozocerites",
     "ozokerites",
-    "ozonations",
+    "ozonations"
+  ],
+  "10p": [
     "pacemakers",
     "pacemaking",
     "pacesetter",
@@ -129080,7 +129508,9 @@
     "pyroxenite",
     "pyroxenoid",
     "pyroxylins",
-    "pyrrhotite",
+    "pyrrhotite"
+  ],
+  "10q": [
     "quackeries",
     "quadplexes",
     "quadrangle",
@@ -129170,7 +129600,9 @@
     "quodlibets",
     "quotations",
     "quotatives",
-    "quotidians",
+    "quotidians"
+  ],
+  "10r": [
     "rabbinates",
     "rabbinical",
     "rabbinisms",
@@ -130435,7 +130867,9 @@
     "rusticator",
     "rutheniums",
     "ruthlessly",
-    "ryegrasses",
+    "ryegrasses"
+  ],
+  "10s": [
     "sabadillas",
     "sabbatical",
     "sabotaging",
@@ -132725,7 +133159,9 @@
     "systematic",
     "systemized",
     "systemizes",
-    "systemless",
+    "systemless"
+  ],
+  "10t": [
     "tabboulehs",
     "tabernacle",
     "tablatures",
@@ -133648,7 +134084,9 @@
     "tyrocidine",
     "tyrocidins",
     "tyrosinase",
-    "tzarevitch",
+    "tzarevitch"
+  ],
+  "10u": [
     "ubiquities",
     "ubiquitous",
     "udometries",
@@ -134349,7 +134787,9 @@
     "uvarovites",
     "uvulitises",
     "uxoricides",
-    "uxoriously",
+    "uxoriously"
+  ],
+  "10v": [
     "vacantness",
     "vacationed",
     "vacationer",
@@ -134676,7 +135116,9 @@
     "vulgarizes",
     "vulnerable",
     "vulnerably",
-    "vulvitises",
+    "vulvitises"
+  ],
+  "10w": [
     "wabbliness",
     "wadsetting",
     "wageworker",
@@ -135022,7 +135464,9 @@
     "wulfenites",
     "wunderkind",
     "wyandottes",
-    "wyliecoats",
+    "wyliecoats"
+  ],
+  "10x": [
     "xanthomata",
     "xenobiotic",
     "xenogamies",
@@ -135042,7 +135486,9 @@
     "xylographs",
     "xylography",
     "xylophones",
-    "xylotomies",
+    "xylotomies"
+  ],
+  "10y": [
     "yardmaster",
     "yardsticks",
     "yearningly",
@@ -135068,7 +135514,9 @@
     "youthquake",
     "ytterbiums",
     "yuppiedoms",
-    "yuppifying",
+    "yuppifying"
+  ],
+  "10z": [
     "zabaglione",
     "zamindaris",
     "zaninesses",
@@ -135104,7 +135552,7 @@
     "zygospores",
     "zymologies"
   ],
-  "11": [
+  "11a": [
     "abandonment",
     "abbreviated",
     "abbreviates",
@@ -136107,7 +136555,9 @@
     "axonometric",
     "azimuthally",
     "azoospermia",
-    "azotobacter",
+    "azotobacter"
+  ],
+  "11b": [
     "babyproofed",
     "babysitters",
     "babysitting",
@@ -136769,7 +137219,9 @@
     "buttonwoods",
     "buttressing",
     "butylations",
-    "buxomnesses",
+    "buxomnesses"
+  ],
+  "11c": [
     "cabinetries",
     "cabinetwork",
     "cablecasted",
@@ -138360,7 +138812,9 @@
     "cytological",
     "cytologists",
     "cytomegalic",
-    "cytoplasmic",
+    "cytoplasmic"
+  ],
+  "11d": [
     "dactylology",
     "daggerboard",
     "dailinesses",
@@ -139337,7 +139791,9 @@
     "dysrhythmia",
     "dysrhythmic",
     "dystrophies",
-    "dystrophins",
+    "dystrophins"
+  ],
+  "11e": [
     "eagernesses",
     "earlinesses",
     "earnestness",
@@ -140046,7 +140502,9 @@
     "exultations",
     "exurbanites",
     "exuviations",
-    "eyedroppers",
+    "eyedroppers"
+  ],
+  "11f": [
     "fabricating",
     "fabrication",
     "fabricators",
@@ -140552,7 +141010,9 @@
     "fustigation",
     "fustinesses",
     "futuristics",
-    "fuzzinesses",
+    "fuzzinesses"
+  ],
+  "11g": [
     "gadolinites",
     "gaillardias",
     "gainfulness",
@@ -140937,7 +141397,9 @@
     "gynogenesis",
     "gynogenetic",
     "gypsophilas",
-    "gyrocompass",
+    "gyrocompass"
+  ],
+  "11h": [
     "haberdasher",
     "habiliments",
     "habilitated",
@@ -141487,7 +141949,9 @@
     "hypothyroid",
     "hypsometers",
     "hypsometric",
-    "hysterotomy",
+    "hysterotomy"
+  ],
+  "11i": [
     "icebreakers",
     "ichthyology",
     "ichthyosaur",
@@ -142328,7 +142792,9 @@
     "itineraries",
     "itinerating",
     "itineration",
-    "ivermectins",
+    "ivermectins"
+  ],
+  "11j": [
     "jabberwocky",
     "jaboticabas",
     "jackhammers",
@@ -142384,7 +142850,9 @@
     "justifiable",
     "justifiably",
     "juvenescent",
-    "juxtaposing",
+    "juxtaposing"
+  ],
+  "11k": [
     "kabbalistic",
     "kallikreins",
     "karyogamies",
@@ -142458,7 +142926,9 @@
     "kookaburras",
     "kookinesses",
     "kwashiorkor",
-    "kymographic",
+    "kymographic"
+  ],
+  "11l": [
     "labializing",
     "labiodental",
     "labiovelars",
@@ -142808,7 +143278,9 @@
     "lysogenised",
     "lysogenises",
     "lysogenized",
-    "lysogenizes",
+    "lysogenizes"
+  ],
+  "11m": [
     "macadamized",
     "macadamizes",
     "macerations",
@@ -143795,7 +144267,9 @@
     "myxomatoses",
     "myxomatosis",
     "myxomycetes",
-    "myxoviruses",
+    "myxoviruses"
+  ],
+  "11n": [
     "nailbrushes",
     "naivenesses",
     "nakednesses",
@@ -144221,7 +144695,9 @@
     "nympholepsy",
     "nympholepts",
     "nymphomania",
-    "nystagmuses",
+    "nystagmuses"
+  ],
+  "11o": [
     "oarsmanship",
     "obfuscating",
     "obfuscation",
@@ -144820,7 +145296,9 @@
     "oxygenators",
     "oxyhydrogen",
     "ozonization",
-    "ozonosphere",
+    "ozonosphere"
+  ],
+  "11p": [
     "pacesetters",
     "pacesetting",
     "pachysandra",
@@ -146309,7 +146787,9 @@
     "pyroxenitic",
     "pyroxenoids",
     "pyrrhotites",
-    "pythonesses",
+    "pythonesses"
+  ],
+  "11q": [
     "quacksalver",
     "quadrangles",
     "quadratures",
@@ -146363,7 +146843,9 @@
     "quiveringly",
     "quizmasters",
     "quizzically",
-    "quotability",
+    "quotability"
+  ],
+  "11r": [
     "rabbitbrush",
     "rabidnesses",
     "racecourses",
@@ -147297,7 +147779,9 @@
     "rusticities",
     "rustinesses",
     "ruthfulness",
-    "ruttishness",
+    "ruttishness"
+  ],
+  "11s": [
     "sabbaticals",
     "saccharases",
     "saccharides",
@@ -148806,7 +149290,9 @@
     "systematism",
     "systematist",
     "systematize",
-    "systemizing",
+    "systemizing"
+  ],
+  "11t": [
     "tabernacled",
     "tabernacles",
     "tablecloths",
@@ -149473,7 +149959,9 @@
     "tyrannously",
     "tyrocidines",
     "tyrosinases",
-    "tyrothricin",
+    "tyrothricin"
+  ],
+  "11u": [
     "ulcerations",
     "ulcerogenic",
     "ultrabright",
@@ -149969,7 +150457,9 @@
     "usurpations",
     "utilitarian",
     "utilization",
-    "utopianisms",
+    "utopianisms"
+  ],
+  "11v": [
     "vacationers",
     "vacationing",
     "vacationist",
@@ -150188,7 +150678,9 @@
     "vulgarising",
     "vulgarities",
     "vulgarizing",
-    "vulneraries",
+    "vulneraries"
+  ],
+  "11w": [
     "wackinesses",
     "wageworkers",
     "waggishness",
@@ -150402,7 +150894,9 @@
     "wrenchingly",
     "wretchedest",
     "wrongheaded",
-    "wrongnesses",
+    "wrongnesses"
+  ],
+  "11x": [
     "xanthophyll",
     "xenophobias",
     "xerographic",
@@ -150412,7 +150906,9 @@
     "xylographer",
     "xylographic",
     "xylophagous",
-    "xylophonist",
+    "xylophonist"
+  ],
+  "11y": [
     "yardmasters",
     "yellowtails",
     "yellowwares",
@@ -150423,7 +150919,9 @@
     "yokefellows",
     "youngbloods",
     "youngnesses",
-    "youthquakes",
+    "youthquakes"
+  ],
+  "11z": [
     "zabagliones",
     "zealousness",
     "zeaxanthins",
@@ -150438,7 +150936,7 @@
     "zwitterions",
     "zygomorphic"
   ],
-  "12": [
+  "12a": [
     "abandonments",
     "abbreviating",
     "abbreviation",
@@ -151128,7 +151626,9 @@
     "axisymmetric",
     "azathioprine",
     "azoospermias",
-    "azotobacters",
+    "azotobacters"
+  ],
+  "12b": [
     "babyproofing",
     "bachelordoms",
     "bachelorette",
@@ -151503,7 +152003,9 @@
     "butterflying",
     "butterscotch",
     "buttonbushes",
-    "buttonholers",
+    "buttonholers"
+  ],
+  "12c": [
     "cabinetmaker",
     "cabinetworks",
     "cablecasting",
@@ -152651,7 +153153,9 @@
     "cytoskeleton",
     "cytotaxonomy",
     "cytotoxicity",
-    "czarevitches",
+    "czarevitches"
+  ],
+  "12d": [
     "daggerboards",
     "damnableness",
     "damselfishes",
@@ -153374,7 +153878,9 @@
     "dysfunctions",
     "dysmenorrhea",
     "dysphemistic",
-    "dysrhythmias",
+    "dysrhythmias"
+  ],
+  "12e": [
     "earsplitting",
     "earthenwares",
     "earthshaking",
@@ -153915,7 +154421,9 @@
     "extremophile",
     "extrications",
     "extroversion",
-    "eyewitnesses",
+    "eyewitnesses"
+  ],
+  "12f": [
     "fabrications",
     "fabulousness",
     "facelessness",
@@ -154212,7 +154720,9 @@
     "fustigations",
     "futilitarian",
     "futurologies",
-    "futurologist",
+    "futurologist"
+  ],
+  "12g": [
     "galactorrhea",
     "galactosemia",
     "galactosemic",
@@ -154441,7 +154951,9 @@
     "gynecologies",
     "gynecologist",
     "gynecomastia",
-    "gyromagnetic",
+    "gyromagnetic"
+  ],
+  "12h": [
     "haberdashers",
     "haberdashery",
     "habilitating",
@@ -154863,7 +155375,9 @@
     "hysterectomy",
     "hysterically",
     "hysteroscope",
-    "hysteroscopy",
+    "hysteroscopy"
+  ],
+  "12i": [
     "iatrogeneses",
     "iatrogenesis",
     "ichthyofauna",
@@ -155603,7 +156117,9 @@
     "italianizing",
     "itemizations",
     "itinerancies",
-    "itinerations",
+    "itinerations"
+  ],
+  "12j": [
     "jackanapeses",
     "jackhammered",
     "jactitations",
@@ -155626,7 +156142,9 @@
     "jurisprudent",
     "juristically",
     "juvenescence",
-    "juvenilities",
+    "juvenilities"
+  ],
+  "12k": [
     "kaleidoscope",
     "karyokineses",
     "karyokinesis",
@@ -155658,7 +156176,9 @@
     "knuckleheads",
     "kremlinology",
     "kwashiorkors",
-    "kymographies",
+    "kymographies"
+  ],
+  "12l": [
     "labanotation",
     "labiodentals",
     "laboratories",
@@ -155865,7 +156385,9 @@
     "lysogenicity",
     "lysogenising",
     "lysogenizing",
-    "lysolecithin",
+    "lysolecithin"
+  ],
+  "12m": [
     "macadamizing",
     "machicolated",
     "machinations",
@@ -156511,7 +157033,9 @@
     "mythologizer",
     "mythologizes",
     "mythomaniacs",
-    "myxedematous",
+    "myxedematous"
+  ],
+  "12n": [
     "namelessness",
     "nanocrystals",
     "nanomachines",
@@ -156872,7 +157396,9 @@
     "nutritiously",
     "nympholeptic",
     "nymphomaniac",
-    "nymphomanias",
+    "nymphomanias"
+  ],
+  "12o": [
     "obdurateness",
     "obfuscations",
     "objectifying",
@@ -157267,7 +157793,9 @@
     "oxyacetylene",
     "oxygenations",
     "ozonizations",
-    "ozonospheres",
+    "ozonospheres"
+  ],
+  "12p": [
     "pachysandras",
     "pacification",
     "pacificators",
@@ -158367,7 +158895,9 @@
     "pyromorphite",
     "pyrophyllite",
     "pyrotechnics",
-    "pyrotechnist",
+    "pyrotechnist"
+  ],
+  "12q": [
     "quacksalvers",
     "quadrangular",
     "quadraphonic",
@@ -158404,7 +158934,9 @@
     "quintillions",
     "quitclaiming",
     "quixotically",
-    "quizzicality",
+    "quizzicality"
+  ],
+  "12r": [
     "rabbinically",
     "racemization",
     "racetrackers",
@@ -159030,7 +159562,9 @@
     "ruminatively",
     "rumormongers",
     "rustications",
-    "ruthlessness",
+    "ruthlessness"
+  ],
+  "12s": [
     "sabermetrics",
     "saccharified",
     "saccharifies",
@@ -159988,7 +160522,9 @@
     "systematized",
     "systematizer",
     "systematizes",
-    "systemically",
+    "systemically"
+  ],
+  "12t": [
     "tabernacling",
     "tabernacular",
     "tachycardias",
@@ -160424,7 +160960,9 @@
     "tyrannically",
     "tyrannicides",
     "tyrannosaurs",
-    "tzarevitches",
+    "tzarevitches"
+  ],
+  "12u": [
     "ubiquitously",
     "uglification",
     "ultimateness",
@@ -160835,7 +161373,9 @@
     "usufructuary",
     "usuriousness",
     "utilizations",
-    "uxoriousness",
+    "uxoriousness"
+  ],
+  "12v": [
     "vacationists",
     "vacationland",
     "vaccinations",
@@ -160971,7 +161511,9 @@
     "voluntourism",
     "voluntourist",
     "voluptuaries",
-    "voluptuously",
+    "voluptuously"
+  ],
+  "12w": [
     "wainscotings",
     "wainscotting",
     "wakeboarders",
@@ -161060,19 +161602,25 @@
     "wrathfulness",
     "wretchedness",
     "wrongfulness",
-    "wunderkinder",
+    "wunderkinder"
+  ],
+  "12x": [
     "xanthophylls",
     "xerographies",
     "xiphisternum",
     "xylographers",
     "xylographies",
-    "xylophonists",
+    "xylophonists"
+  ],
+  "12y": [
     "yellowhammer",
     "yellowthroat",
     "yesternights",
     "yoctoseconds",
     "youngberries",
-    "youthfulness",
+    "youthfulness"
+  ],
+  "12z": [
     "zeptoseconds",
     "zillionaires",
     "zoogeography",
@@ -161085,7 +161633,7 @@
     "zwitterionic",
     "zygapophysis"
   ],
-  "13": [
+  "13a": [
     "abbreviations",
     "abiogenically",
     "abnormalities",
@@ -161560,7 +162108,9 @@
     "axiologically",
     "axiomatically",
     "axisymmetries",
-    "azathioprines",
+    "azathioprines"
+  ],
+  "13b": [
     "baccalaureate",
     "bachelorettes",
     "bachelorhoods",
@@ -161768,7 +162318,9 @@
     "businesswomen",
     "butterfingers",
     "butyraldehyde",
-    "butyrophenone",
+    "butyrophenone"
+  ],
+  "13c": [
     "cabinetmakers",
     "cabinetmaking",
     "cachinnations",
@@ -162536,7 +163088,9 @@
     "cytomembranes",
     "cytopathology",
     "cytoskeletons",
-    "cytotaxonomic",
+    "cytotaxonomic"
+  ],
+  "13d": [
     "dactylologies",
     "daguerreotype",
     "daguerreotypy",
@@ -163013,7 +163567,9 @@
     "dysmenorrheas",
     "dysmenorrheic",
     "dysmenorrhoea",
-    "dyspeptically",
+    "dyspeptically"
+  ],
+  "13e": [
     "easygoingness",
     "eavesdroppers",
     "eavesdropping",
@@ -163381,7 +163937,9 @@
     "extremophiles",
     "extrinsically",
     "extroversions",
-    "extrudability",
+    "extrudability"
+  ],
+  "13f": [
     "facetiousness",
     "facilitations",
     "factionalisms",
@@ -163548,7 +164106,9 @@
     "furazolidones",
     "futilitarians",
     "futurological",
-    "futurologists",
+    "futurologists"
+  ],
+  "13g": [
     "galactorrheas",
     "galactosamine",
     "galactosemias",
@@ -163690,7 +164250,9 @@
     "gynecologists",
     "gynecomastias",
     "gyrocompasses",
-    "gyrofrequency",
+    "gyrofrequency"
+  ],
+  "13h": [
     "habilitations",
     "habitableness",
     "hagiographers",
@@ -163934,7 +164496,9 @@
     "hypoxanthines",
     "hysteroscopes",
     "hysteroscopic",
-    "hysterotomies",
+    "hysterotomies"
+  ],
+  "13i": [
     "ichthyofaunae",
     "ichthyofaunal",
     "ichthyofaunas",
@@ -164512,7 +165076,9 @@
     "isostatically",
     "isotonicities",
     "isotretinoins",
-    "italicization",
+    "italicization"
+  ],
+  "13j": [
     "jabberwockies",
     "jackhammering",
     "japonaiseries",
@@ -164528,7 +165094,9 @@
     "justification",
     "justificative",
     "justificatory",
-    "juxtaposition",
+    "juxtaposition"
+  ],
+  "13k": [
     "kaffeeklatsch",
     "kaleidoscopes",
     "kaleidoscopic",
@@ -164550,7 +165118,9 @@
     "knowledgeable",
     "knowledgeably",
     "knuckleballer",
-    "knuckleheaded",
+    "knuckleheaded"
+  ],
+  "13l": [
     "labanotations",
     "labialization",
     "laboriousness",
@@ -164642,7 +165212,9 @@
     "lymphographic",
     "lymphomatoses",
     "lymphosarcoma",
-    "lysolecithins",
+    "lysolecithins"
+  ],
+  "13m": [
     "machicolation",
     "machinability",
     "macroeconomic",
@@ -165086,7 +165658,9 @@
     "mythographies",
     "mythologizers",
     "mythologizing",
-    "mythopoetical",
+    "mythopoetical"
+  ],
+  "13n": [
     "nanoparticles",
     "nanostructure",
     "naphthylamine",
@@ -165400,7 +165974,9 @@
     "nutritionally",
     "nutritionists",
     "nympholepsies",
-    "nymphomaniacs",
+    "nymphomaniacs"
+  ],
+  "13o": [
     "objectionable",
     "objectionably",
     "objectiveness",
@@ -165689,7 +166265,9 @@
     "ovoviviparous",
     "oxaloacetates",
     "oxyhemoglobin",
-    "oystercatcher",
+    "oystercatcher"
+  ],
+  "13p": [
     "pacifications",
     "packinghouses",
     "paediatrician",
@@ -166478,7 +167056,9 @@
     "pyrophosphate",
     "pyrophyllites",
     "pyrotechnical",
-    "pyrotechnists",
+    "pyrotechnists"
+  ],
+  "13q": [
     "quadraphonics",
     "quadratically",
     "quadrennially",
@@ -166511,7 +167091,9 @@
     "quinquennials",
     "quinquenniums",
     "quintillionth",
-    "quintuplicate",
+    "quintuplicate"
+  ],
+  "13r": [
     "radiationless",
     "radiculopathy",
     "radioactively",
@@ -166960,7 +167542,9 @@
     "rudimentarily",
     "ruggedization",
     "rumbustiously",
-    "rutherfordium",
+    "rutherfordium"
+  ],
+  "13s": [
     "saccharifying",
     "saccharimeter",
     "saccharometer",
@@ -167543,7 +168127,9 @@
     "systematising",
     "systematizers",
     "systematizing",
-    "systemization",
+    "systemization"
+  ],
+  "13t": [
     "tablespoonful",
     "tachistoscope",
     "talkativeness",
@@ -167817,7 +168403,9 @@
     "typographical",
     "typologically",
     "tyrannosaurid",
-    "tyrannosaurus",
+    "tyrannosaurus"
+  ],
+  "13u": [
     "ultracautious",
     "ultracritical",
     "ultradistance",
@@ -168108,7 +168696,9 @@
     "urediniospore",
     "urethroscopes",
     "urogynecology",
-    "uselessnesses",
+    "uselessnesses"
+  ],
+  "13v": [
     "vacationlands",
     "vacillatingly",
     "vacuousnesses",
@@ -168204,7 +168794,9 @@
     "vulcanization",
     "vulcanologist",
     "vulgarization",
-    "vulnerability",
+    "vulnerability"
+  ],
+  "13w": [
     "wafflestomper",
     "wainscottings",
     "wallydraigles",
@@ -168240,15 +168832,21 @@
     "woolgathering",
     "worrisomeness",
     "worthlessness",
-    "wrongheadedly",
+    "wrongheadedly"
+  ],
+  "13x": [
     "xenodiagnoses",
     "xenodiagnosis",
     "xerophthalmia",
     "xerophthalmic",
-    "xylographical",
+    "xylographical"
+  ],
+  "13y": [
     "yellowhammers",
     "yellowthroats",
-    "yuppification",
+    "yuppification"
+  ],
+  "13z": [
     "zombification",
     "zoogeographer",
     "zoogeographic",
@@ -168257,7 +168855,7 @@
     "zooxanthellae",
     "zygodactylous"
   ],
-  "14": [
+  "14a": [
     "abortifacients",
     "absentmindedly",
     "absorptiometry",
@@ -168542,7 +169140,9 @@
     "avascularities",
     "axiomatisation",
     "axiomatization",
-    "axisymmetrical",
+    "axisymmetrical"
+  ],
+  "14b": [
     "baccalaureates",
     "backscattering",
     "backwardnesses",
@@ -168659,7 +169259,9 @@
     "butterfingered",
     "butterscotches",
     "butyraldehydes",
-    "butyrophenones",
+    "butyrophenones"
+  ],
+  "14c": [
     "calcifications",
     "calculatedness",
     "calligraphists",
@@ -169137,7 +169739,9 @@
     "cytophotometry",
     "cytotaxonomies",
     "cytotechnology",
-    "cytotoxicities",
+    "cytotoxicities"
+  ],
+  "14d": [
     "daguerreotypes",
     "dandifications",
     "decarbonations",
@@ -169457,7 +170061,9 @@
     "drinkabilities",
     "dryopithecines",
     "dumbfoundingly",
-    "dysmenorrhoeas",
+    "dysmenorrhoeas"
+  ],
+  "14e": [
     "earthshakingly",
     "eccentricities",
     "ecclesiastical",
@@ -169650,7 +170256,9 @@
     "extrapyramidal",
     "extravagancies",
     "extravasations",
-    "extravehicular",
+    "extravehicular"
+  ],
+  "14f": [
     "fabulousnesses",
     "factitiousness",
     "factorizations",
@@ -169740,7 +170348,9 @@
     "fundamentalism",
     "fundamentalist",
     "futurelessness",
-    "futuristically",
+    "futuristically"
+  ],
+  "14g": [
     "galactosamines",
     "galactosidases",
     "galvanizations",
@@ -169813,7 +170423,9 @@
     "gynandromorphs",
     "gynandromorphy",
     "gyroscopically",
-    "gyrostabilizer",
+    "gyrostabilizer"
+  ],
+  "14h": [
     "haberdasheries",
     "habitabilities",
     "hagiographical",
@@ -169999,7 +170611,9 @@
     "hypothyroidism",
     "hypotonicities",
     "hysterectomies",
-    "hysteroscopies",
+    "hysteroscopies"
+  ],
+  "14i": [
     "iatrogenically",
     "ichthyological",
     "ichthyologists",
@@ -170350,7 +170964,9 @@
     "isomorphically",
     "isoproterenols",
     "isothiocyanate",
-    "italicizations",
+    "italicizations"
+  ],
+  "14j": [
     "jingoistically",
     "johnsongrasses",
     "jollifications",
@@ -170359,7 +170975,9 @@
     "justiciability",
     "justifiability",
     "justifications",
-    "juxtapositions",
+    "juxtapositions"
+  ],
+  "14k": [
     "kapellmeisters",
     "karyotypically",
     "keratinization",
@@ -170371,7 +170989,9 @@
     "kinesiologists",
     "knickerbockers",
     "knuckleballers",
-    "kremlinologist",
+    "kremlinologist"
+  ],
+  "14l": [
     "labializations",
     "labyrinthodont",
     "lachrymosities",
@@ -170436,7 +171056,9 @@
     "lymphosarcomas",
     "lyophilization",
     "lysogenicities",
-    "lysogenization",
+    "lysogenization"
+  ],
+  "14m": [
     "machicolations",
     "machineability",
     "macroaggregate",
@@ -170698,7 +171320,9 @@
     "myrmecophilous",
     "mysteriousness",
     "mystifications",
-    "mythologically",
+    "mythologically"
+  ],
+  "14n": [
     "nanostructured",
     "nanostructures",
     "nanotechnology",
@@ -170917,7 +171541,9 @@
     "nutraceuticals",
     "nutriceuticals",
     "nutritiousness",
-    "nymphomaniacal",
+    "nymphomaniacal"
+  ],
+  "14o": [
     "objectlessness",
     "obligingnesses",
     "obsequiousness",
@@ -171121,7 +171747,9 @@
     "oxidoreductase",
     "oxyhemoglobins",
     "oxymoronically",
-    "oystercatchers",
+    "oystercatchers"
+  ],
+  "14p": [
     "pachydermatous",
     "pacifistically",
     "paediatricians",
@@ -171667,7 +172295,9 @@
     "pyrometallurgy",
     "pyrometrically",
     "pyrophosphates",
-    "pyrotechnician",
+    "pyrotechnician"
+  ],
+  "14q": [
     "quadrilaterals",
     "quadrillionths",
     "quadrumvirates",
@@ -171686,7 +172316,9 @@
     "quintessential",
     "quintillionths",
     "quintuplicated",
-    "quintuplicates",
+    "quintuplicates"
+  ],
+  "14r": [
     "radicalization",
     "radioautograph",
     "radiobiologist",
@@ -171951,7 +172583,9 @@
     "roentgenograms",
     "roentgenologic",
     "roundaboutness",
-    "rumormongering",
+    "rumormongering"
+  ],
+  "14s": [
     "sabermetrician",
     "saccharimeters",
     "saccharinities",
@@ -172296,7 +172930,9 @@
     "synchroneities",
     "synchronically",
     "systematically",
-    "systematicness",
+    "systematicness"
+  ],
+  "14t": [
     "tablespoonfuls",
     "tablespoonsful",
     "tachistoscopes",
@@ -172463,7 +173099,9 @@
     "turbogenerator",
     "turbomachinery",
     "tyrannicalness",
-    "tyrannosaurids",
+    "tyrannosaurids"
+  ],
+  "14u": [
     "ubiquitousness",
     "ultimogeniture",
     "ultracivilized",
@@ -172665,7 +173303,9 @@
     "urbanistically",
     "urediniospores",
     "usufructuaries",
-    "utilitarianism",
+    "utilitarianism"
+  ],
+  "14v": [
     "vaingloriously",
     "valedictorians",
     "valetudinarian",
@@ -172718,7 +173358,9 @@
     "vulcanologists",
     "vulgarizations",
     "vulnerableness",
-    "vulvovaginitis",
+    "vulvovaginitis"
+  ],
+  "14w": [
     "wafflestompers",
     "wappenschawing",
     "watercolorists",
@@ -172739,14 +173381,19 @@
     "whortleberries",
     "winterizations",
     "worshipfulness",
-    "worthwhileness",
+    "worthwhileness"
+  ],
+  "14x": [
     "xenodiagnostic",
     "xenophobically",
     "xenotransplant",
-    "xerophthalmias",
+    "xerophthalmias"
+  ],
+  "14z": [
     "zoogeographers"
   ],
-  "15": [
+  "14y": [],
+  "15a": [
     "absorbabilities",
     "abstractionisms",
     "abstractionists",
@@ -172911,7 +173558,9 @@
     "autotrophically",
     "axiomatisations",
     "axiomatizations",
-    "azidothymidines",
+    "azidothymidines"
+  ],
+  "15b": [
     "bacteriological",
     "bacteriologists",
     "bacteriophagies",
@@ -172964,7 +173613,9 @@
     "bronchoscopists",
     "bureaucratising",
     "bureaucratizing",
-    "businesspersons",
+    "businesspersons"
+  ],
+  "15c": [
     "cannibalization",
     "capitalizations",
     "carcinogenicity",
@@ -173238,7 +173889,9 @@
     "cytopathologies",
     "cytopathologist",
     "cytophotometric",
-    "cytoplasmically",
+    "cytoplasmically"
+  ],
+  "15d": [
     "daguerreotypist",
     "deacidification",
     "decalcification",
@@ -173439,7 +174092,9 @@
     "dorsoventrality",
     "downheartedness",
     "dramaturgically",
-    "dyslogistically",
+    "dyslogistically"
+  ],
+  "15e": [
     "ecclesiasticism",
     "ecclesiological",
     "ecclesiologists",
@@ -173574,7 +174229,9 @@
     "extracurricular",
     "extrajudicially",
     "extralinguistic",
-    "extraordinarily",
+    "extraordinarily"
+  ],
+  "15f": [
     "facetiousnesses",
     "familiarization",
     "fantasticalness",
@@ -173607,7 +174264,9 @@
     "functionalities",
     "fundamentalisms",
     "fundamentalists",
-    "futilitarianism",
+    "futilitarianism"
+  ],
+  "15g": [
     "gastroenteritis",
     "gastronomically",
     "gelatinizations",
@@ -173642,7 +174301,9 @@
     "gravitationally",
     "gynandromorphic",
     "gyrofrequencies",
-    "gyrostabilizers",
+    "gyrostabilizers"
+  ],
+  "15h": [
     "halfheartedness",
     "harpsichordists",
     "headmasterships",
@@ -173754,7 +174415,9 @@
     "hyposensitizing",
     "hypostatization",
     "hypothyroidisms",
-    "hysterectomized",
+    "hysterectomized"
+  ],
+  "15i": [
     "ichthyosaurians",
     "identicalnesses",
     "identifications",
@@ -174027,15 +174690,21 @@
     "irreversibility",
     "irrevocableness",
     "irritablenesses",
-    "isothiocyanates",
+    "isothiocyanates"
+  ],
+  "15j": [
     "jurisprudential",
-    "juxtapositional",
+    "juxtapositional"
+  ],
+  "15k": [
     "kaffeeklatsches",
     "keratinizations",
     "kindergarteners",
     "kindheartedness",
     "kinesthetically",
-    "kremlinologists",
+    "kremlinologists"
+  ],
+  "15l": [
     "labyrinthodonts",
     "lackadaisically",
     "laryngectomized",
@@ -174068,7 +174737,9 @@
     "lymphangiograms",
     "lymphogranuloma",
     "lyophilizations",
-    "lysogenizations",
+    "lysogenizations"
+  ],
+  "15m": [
     "machinabilities",
     "macroaggregated",
     "macroaggregates",
@@ -174249,7 +174920,9 @@
     "multitudinously",
     "multiwavelength",
     "musculoskeletal",
-    "musicalizations",
+    "musicalizations"
+  ],
+  "15n": [
     "nanocrystalline",
     "nationalization",
     "naturalizations",
@@ -174387,7 +175060,9 @@
     "nucleophilicity",
     "nucleosyntheses",
     "nucleosynthesis",
-    "nucleosynthetic",
+    "nucleosynthetic"
+  ],
+  "15o": [
     "objectification",
     "objectivenesses",
     "obliviousnesses",
@@ -174530,7 +175205,9 @@
     "ovoviviparously",
     "oxidoreductases",
     "oxyphenbutazone",
-    "oxytetracycline",
+    "oxytetracycline"
+  ],
+  "15p": [
     "palatalizations",
     "paleobiological",
     "paleobiologists",
@@ -174852,7 +175529,9 @@
     "pyramidologists",
     "pyroelectricity",
     "pyrotechnically",
-    "pyrotechnicians",
+    "pyrotechnicians"
+  ],
+  "15q": [
     "quadruplicating",
     "quadruplication",
     "quantifications",
@@ -174861,7 +175540,9 @@
     "quatercentenary",
     "quincentenaries",
     "quincentennials",
-    "quintuplicating",
+    "quintuplicating"
+  ],
+  "15r": [
     "radiculopathies",
     "radioactivities",
     "radioautographs",
@@ -174998,7 +175679,9 @@
     "roentgenologist",
     "romanticization",
     "rudimentariness",
-    "rumbustiousness",
+    "rumbustiousness"
+  ],
+  "15s": [
     "sabermetricians",
     "sacramentalisms",
     "sacramentalists",
@@ -175185,7 +175868,9 @@
     "synchronousness",
     "synecdochically",
     "synergistically",
-    "systematization",
+    "systematization"
+  ],
+  "15t": [
     "tachyarrhythmia",
     "tarsometatarsus",
     "tatterdemalions",
@@ -175281,7 +175966,9 @@
     "turbogenerators",
     "twentysomething",
     "typographically",
-    "tyrannosauruses",
+    "tyrannosauruses"
+  ],
+  "15u": [
     "ultracentrifuge",
     "ultracommercial",
     "ultraconvenient",
@@ -175387,7 +176074,9 @@
     "untraditionally",
     "unwillingnesses",
     "unworldlinesses",
-    "urogynecologist",
+    "urogynecologist"
+  ],
+  "15v": [
     "valetudinarians",
     "vascularization",
     "vasoconstrictor",
@@ -175405,7 +176094,9 @@
     "vivisectionists",
     "voluntarinesses",
     "voyeuristically",
-    "vulnerabilities",
+    "vulnerabilities"
+  ],
+  "15w": [
     "wappenschawings",
     "warmheartedness",
     "warrantableness",
@@ -175414,10 +176105,15 @@
     "whatchamacallit",
     "whippersnappers",
     "wholesomenesses",
-    "wrongheadedness",
+    "wrongheadedness"
+  ],
+  "15x": [
     "xenotransplants",
     "xerographically",
-    "xeroradiography",
+    "xeroradiography"
+  ],
+  "15z": [
     "zoogeographical"
-  ]
+  ],
+  "15y": []
 }

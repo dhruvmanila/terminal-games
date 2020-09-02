@@ -16,24 +16,26 @@ Sample:
 ]
 """
 import json
+from string import ascii_lowercase
 
 
 def extract_words(to_file):
-    word_list = []
+    word_dict = {}
     for word_count in range(2, 16):
         with open(f"words_json/{word_count}_letter_words.json") as word_file:
             json_tree = json.load(word_file)
             for json_dict in json_tree:
-                word_list.append(json_dict['word'])
+                word = json_dict['word']
+                word_code = str(len(word)) + word[0]
+                if word_code not in word_dict:
+                    word_dict[word_code] = [word]
+                else:
+                    word_dict[word_code].append(word)
+        if len(word_dict) != (26 * (word_count - 1)):
+            for letter in ascii_lowercase:
+                check = str(word_count) + letter
+                _ = word_dict.setdefault(check, [])
         print(f"Done copying {word_count} letter words.")
-
-    word_dict = {}
-    for word in word_list:
-        length = len(word)
-        if length not in word_dict:
-            word_dict[length] = [word]
-        else:
-            word_dict[length].append(word)
 
     json.dump(word_dict, to_file)
 
