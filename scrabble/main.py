@@ -129,8 +129,8 @@ def is_valid_word(word: str, hand: Dict[str, int],
     Does not mutate hand or word_dict.
     """
     word = word.lower()  # Only for testing
-    word_length = str(len(word))
-    if word_length == '1':
+    word_code = str(len(word)) + word[0]
+    if word_code.startswith('1'):
         return False
 
     for letter in word:
@@ -142,11 +142,14 @@ def is_valid_word(word: str, hand: Dict[str, int],
         elif letter == '*':
             wild_word_list = [word.replace('*', v) for v in VOWELS]
             for wild_word in wild_word_list:
-                if wild_word in word_dict[word_length]:
+                # If wildcard is the first letter, we have five different
+                # word codes.
+                wild_word_code = str(len(wild_word)) + wild_word[0]
+                if wild_word in word_dict[wild_word_code]:
                     return True
             return False
 
-    return True if word in word_dict[word_length] else False
+    return True if word in word_dict[word_code] else False
 
 
 def calculate_handlen(hand: Dict[str, int]) -> int:
@@ -200,7 +203,7 @@ def comp_choose_word(hand: Dict[str, int], word_dict: Dict[str, List[str]],
     all_hands = comp_all_hands(hand)
 
     # No need to loop over words of size longer than the current hand length
-    possible_words = list(word_dict.values())[:hand_length - 1]
+    possible_words = list(word_dict.values())[:26 * (hand_length - 1)]
 
     for vhand in all_hands:
         word_chain = chain(*possible_words)

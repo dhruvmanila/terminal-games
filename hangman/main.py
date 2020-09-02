@@ -9,7 +9,7 @@ INSTRUCTION_FILENAME = "instructions.txt"
 WORDS_FILENAME = 'words.json'
 INPUT_CHECK = punctuation + digits + whitespace
 VOWELS = 'aeiou'
-LINE_SEP = '-' * 50
+LINE_SEP = '-' * 70
 
 
 def display_hangman(guess_rem: int, guessed: str, word: str = '') -> None:
@@ -32,9 +32,9 @@ def display_hangman(guess_rem: int, guessed: str, word: str = '') -> None:
                     +------+
                     |      |
                     |      o
-                    |     \|/
+                    |     |||
                     |      |
-                    |     / \
+                    |     | |
                     |
                 ==================
               You lost him: {word}
@@ -271,12 +271,17 @@ def show_possible_matches(my_word: str, word_length: str, word_dict: dict) -> No
     """
     word_matches = ''
     my_word_string = ''.join([letter for letter in my_word if letter != ' '])
+    letter_count = 0
 
     for word in word_dict[word_length]:
         if match_with_gaps(my_word_string, word):
+            letter_count += len(word) + 1
+            if letter_count > len(LINE_SEP):
+                word_matches += '\n'
+                letter_count = len(word) + 1
             word_matches += (word + ' ')
 
-    print(f"Possible word matches for [ {my_word} ] are:\n{word_matches}")
+    print(f"\nPossible word matches for [ {my_word} ] are:\n{word_matches}")
 
 
 def hangman_game(secret_word: str, word_dict: dict, hint_choice: str) -> int:
