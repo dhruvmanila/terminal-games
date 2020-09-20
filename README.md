@@ -14,28 +14,30 @@ instructions are mentioned below.
 Keep all the files and folders as it is in one folder. Download the game by 
 one of the following ways:
 
-Download the [zip file](https://github.com/dhruvmanila/scrabble/archive/master.zip) 
+Download the [zip file](https://github.com/dhruvmanila/terminal-games/archive/master.zip). 
+By default the folder will be downloaded as terminal-games-master.
 
-Download the folder from terminal: 
-`git clone https://github.com/dhruvmanila/scrabble.git`
+Clone the repository from terminal: 
+`git clone https://github.com/dhruvmanila/terminal-games.git`
 
 ### How to open the game:
 
-Open the terminal and go to the folder **hangman** or **scrabble** by entering
- the following command where directory path is the path to the folder from 
- your root directory. The first one is for Mac and the second is for Windows.
+Open the terminal and go to the folder **terminal-games-master** by entering
+ the following command where `path/to/terminal-games-master` is the path to the main folder from 
+ your root directory.
 
 ```
-cd /users/username/path/to/gamename  -> For MacOS
+cd /Users/username/path/to/terminal-games-master       -> For MacOS/Linux
 
-cd C:\users\username\path\to\gamename  -> For Windows
+cd C:\Users\username\path\to\terminal-games-master     -> For Windows
 ```
 
-Try running this command to get the list of the files `ls -l` and if you see
-a file called **main.py** than you're in the correct folder otherwise
+Try running this command to get the list of the files and folders: `ls` for linux and mac, `dir` for windows and if you see 
+the folders **hangman** and **scrabble** than you're in the correct folder otherwise
 please google 'How to change directory from terminal in macOS/windows.'
 
-To play the game enter the following command: `python3 main.py`
+To play the game enter the following command: `python <game name>` where `<game name>` can be either scrabble or hangman. 
+ If this didn't work, please try `python3` instead of `python`.
 
 #### Words
 
@@ -83,7 +85,7 @@ file containing words you can do so by opening the **main.py** file in any text
 editor and edit the section with the heading **public variables**. Do not edit 
 any of the things outside this boundary:
 
-```
+```python
 # ---------------- public variables ----------------
 
 # Size of each hand
