@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import json
+import os
 import random
 from math import ceil
 from string import ascii_lowercase
@@ -40,7 +41,8 @@ def load_words() -> Dict[str, List[str]]:
     words. Words are strings of lowercase letters.
     """
     print(f"{LINE_SEP}\nLoading words from the file...")
-    with open(WORDS_FILENAME) as word_file:
+    here = os.path.dirname(os.path.abspath(__file__))
+    with open(os.path.join(here, WORDS_FILENAME)) as word_file:
         word_dict = json.load(word_file)
     print(f"Words loaded. Game on!\n{LINE_SEP}")
     return word_dict
