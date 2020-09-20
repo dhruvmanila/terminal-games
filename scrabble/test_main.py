@@ -15,9 +15,9 @@ TEST_SCORE = [
     ("Outgnaw", 7, 539),
     ("fork", 7, 209),
     ("FORK", 4, 308),
-    ("h*ney", 7, 290),  # with wilcards
-    ("c*ws", 6, 176),  # with wilcards
-    ("wa*ls", 7, 203)  # with wilcards
+    ("h*ney", 7, 290),  # with wildcards
+    ("c*ws", 6, 176),  # with wildcards
+    ("wa*ls", 7, 203)  # with wildcards
 ]
 
 TEST_UPDATE_HAND = [
