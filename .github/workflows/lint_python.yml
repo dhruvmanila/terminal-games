@@ -14,7 +14,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - run: pip install black codespell flake8 isort pytest
-      - run: black --check . 
+      - run: black --check --diff . 
         # ignore words.json files
       - run: codespell --quiet-level=2 --skip="*.json"  
         # look at PR #1
