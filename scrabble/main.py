@@ -188,7 +188,7 @@ def calculate_handlen(hand: Dict[str, int]) -> int:
 
 def comp_update_word(hand: Dict[str, int], word: str) -> str:
     """
-    Updates and returns the computers word if it used the wildcard '*' 
+    Updates and returns the computers word if it used the wildcard '*'
     otherwise returns the word as it is.
     """
     new_word = word
@@ -222,7 +222,7 @@ def comp_choose_word(
     hand: Dict[str, int], word_dict: Dict[str, List[str]], hand_length: int
 ) -> str:
     """
-    Given a hand and a word_dict, find the word that gives 
+    Given a hand and a word_dict, find the word that gives
     the maximum value score, and return it.
     If no words in the word_dict can be made from the hand, return None.
     """
@@ -253,7 +253,7 @@ def comp_choose_word(
 def comp_play_hand(hand: Dict[str, int], word_dict: Dict[str, List[str]]) -> int:
     """
     Allows the computer to play the given hand, following the same procedure
-    as playHand, except instead of the user choosing a word, the computer 
+    as playHand, except instead of the user choosing a word, the computer
     chooses it.
     """
     comp_total_score = 0

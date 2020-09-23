@@ -255,7 +255,7 @@ def input_handling(
 
 def match_with_gaps(my_word_string: str, other_word: str) -> bool:
     """
-    my_word_string: string with _ characters but no spaces, 
+    my_word_string: string with _ characters but no spaces,
     current guess of secret word
     other_word: string, regular English word
     Assuming my_word_string and other_word are of the same length
