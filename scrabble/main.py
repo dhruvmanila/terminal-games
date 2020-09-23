@@ -3,10 +3,10 @@
 import json
 import os
 import random
+from itertools import chain
 from math import ceil
 from string import ascii_lowercase
-from typing import Iterable, Tuple, Dict, List
-from itertools import chain
+from typing import Dict, Iterable, List, Tuple
 
 # ---------------- public variables ----------------
 
@@ -14,19 +14,43 @@ from itertools import chain
 HAND_SIZE = 7
 
 # Length of line separating the sections
-LINE_SEP = '-' * 70
+LINE_SEP = "-" * 70
 
 # ------------ end of public variables -------------
 
 WORDS_FILENAME = "words.json"
 
-VOWELS = 'aeiou'
-CONSONANTS = 'bcdfghjklmnpqrstvwxyz'
+VOWELS = "aeiou"
+CONSONANTS = "bcdfghjklmnpqrstvwxyz"
 
 SCRABBLE_LETTER_VALUES = {
-    'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1,
-    'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1,
-    's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10, '*': 0
+    "a": 1,
+    "b": 3,
+    "c": 3,
+    "d": 2,
+    "e": 1,
+    "f": 4,
+    "g": 2,
+    "h": 4,
+    "i": 1,
+    "j": 8,
+    "k": 5,
+    "l": 1,
+    "m": 3,
+    "n": 1,
+    "o": 1,
+    "p": 3,
+    "q": 10,
+    "r": 1,
+    "s": 1,
+    "t": 1,
+    "u": 1,
+    "v": 4,
+    "w": 4,
+    "x": 8,
+    "y": 4,
+    "z": 10,
+    "*": 0,
 }
 
 # These should be global and will be cleared with each call to comp_play_hand
@@ -72,10 +96,10 @@ def display_hand(hand: Dict[str, int]) -> str:
     Returns the string in a displayable format.
     The order of the letters is unimportant.
     """
-    letter_string = ''
+    letter_string = ""
     for letter in hand.keys():
         for _ in range(hand[letter]):
-            letter_string += letter + ' '
+            letter_string += letter + " "
     return letter_string
 
 
@@ -98,7 +122,7 @@ def deal_hand(let_count: int) -> Dict[str, int]:
         x = random.choice(CONSONANTS)
         hand[x] = hand.get(x, 0) + 1
 
-    hand['*'] = 1
+    hand["*"] = 1
     return hand
 
 
@@ -123,8 +147,9 @@ def update_hand(hand: Dict[str, int], word: str) -> Dict[str, int]:
     return new_hand
 
 
-def is_valid_word(word: str, hand: Dict[str, int],
-                  word_dict: Dict[str, List[str]]) -> bool:
+def is_valid_word(
+    word: str, hand: Dict[str, int], word_dict: Dict[str, List[str]]
+) -> bool:
     """
     Returns True if word is in the word_list and is entirely
     composed of letters in the hand. Otherwise, returns False.
@@ -132,7 +157,7 @@ def is_valid_word(word: str, hand: Dict[str, int],
     """
     word = word.lower()  # Only for testing
     word_code = str(len(word)) + word[0]
-    if word_code.startswith('1'):
+    if word_code.startswith("1"):
         return False
 
     for letter in word:
@@ -141,8 +166,8 @@ def is_valid_word(word: str, hand: Dict[str, int],
         # If the word contains the wildcard character '*', it makes a
         # list by replacing it with each vowels and searches the word
         # in the word_dict.
-        elif letter == '*':
-            wild_word_list = [word.replace('*', v) for v in VOWELS]
+        elif letter == "*":
+            wild_word_list = [word.replace("*", v) for v in VOWELS]
             for wild_word in wild_word_list:
                 # If wildcard is the first letter, we have five different
                 # word codes.
@@ -170,7 +195,7 @@ def comp_update_word(hand: Dict[str, int], word: str) -> str:
 
     for letter in word:
         if word.count(letter) > hand.get(letter, 0):
-            new_word = new_word.replace(letter, '*', 1)
+            new_word = new_word.replace(letter, "*", 1)
             break
 
     return new_word
@@ -186,15 +211,16 @@ def comp_all_hands(hand: Dict[str, int]) -> List[Dict[str, int]]:
 
     for v in VOWELS:
         temp_hand = hand.copy()
-        value = temp_hand.pop('*')
+        value = temp_hand.pop("*")
         temp_hand[v] = temp_hand.get(v, 0) + value
         result.append(temp_hand)
 
     return result
 
 
-def comp_choose_word(hand: Dict[str, int], word_dict: Dict[str, List[str]],
-                     hand_length: int) -> str:
+def comp_choose_word(
+    hand: Dict[str, int], word_dict: Dict[str, List[str]], hand_length: int
+) -> str:
     """
     Given a hand and a word_dict, find the word that gives 
     the maximum value score, and return it.
@@ -205,7 +231,7 @@ def comp_choose_word(hand: Dict[str, int], word_dict: Dict[str, List[str]],
     all_hands = comp_all_hands(hand)
 
     # No need to loop over words of size longer than the current hand length
-    possible_words = list(word_dict.values())[:26 * (hand_length - 1)]
+    possible_words = list(word_dict.values())[: 26 * (hand_length - 1)]
 
     for vhand in all_hands:
         word_chain = chain(*possible_words)
@@ -246,8 +272,10 @@ def comp_play_hand(hand: Dict[str, int], word_dict: Dict[str, List[str]]) -> int
             comp_word = comp_update_word(hand, comp_word)
             comp_score = get_word_score(comp_word, hand_length)
             comp_total_score += comp_score
-            print(f'"{comp_word}" earned {comp_score} points. '
-                  f'Total: {comp_total_score} points.')
+            print(
+                f'"{comp_word}" earned {comp_score} points. '
+                f"Total: {comp_total_score} points."
+            )
 
         COMP_WORDS.append(comp_word)
         hand = update_hand(hand, comp_word)
@@ -273,10 +301,13 @@ def play_hand(hand: Dict[str, int], word_dict: Dict[str, List[str]]) -> int:
 
     while (hand_length := calculate_handlen(hand)) > 0:
         print(f"\nCurrent hand: {display_hand(hand)}")
-        player_input = input('Enter word, or a "." to indicate '
-                             'that you are finished: ').lower().strip()
+        player_input = (
+            input('Enter word, or a "." to indicate ' "that you are finished: ")
+            .lower()
+            .strip()
+        )
 
-        if player_input == '.':
+        if player_input == ".":
             break
 
         # Player cannot input the same word played by the computer
@@ -290,8 +321,10 @@ def play_hand(hand: Dict[str, int], word_dict: Dict[str, List[str]]) -> int:
             PLAYER_WORDS.append(player_input)
             total_score += player_input_score
 
-            print(f'"{player_input}" earned {player_input_score} points. '
-                  f'Total: {total_score} points.')
+            print(
+                f'"{player_input}" earned {player_input_score} points. '
+                f"Total: {total_score} points."
+            )
 
         else:
             print("Invalid word, please try again.")
@@ -299,7 +332,7 @@ def play_hand(hand: Dict[str, int], word_dict: Dict[str, List[str]]) -> int:
         # Read the note in doctstring
         hand = update_hand(hand, player_input)
 
-    if player_input == '.':
+    if player_input == ".":
         print(f"\nGame ended. Total score: {total_score} points.\n")
     else:
         print(f"\nRan out of letters. Total score: {total_score} points.\n")
@@ -342,8 +375,9 @@ def read_val(val_type, request_msg: str, error_msg: str = "Invalid input."):
             print(f'"{user_input}": {error_msg}\n')
 
 
-def input_handling(request_msg: str, input_option: Iterable,
-                   error_msg: str = "Invalid input.") -> str:
+def input_handling(
+    request_msg: str, input_option: Iterable, error_msg: str = "Invalid input."
+) -> str:
     """
     Returns (str) user choice from the option and handles invalid input
 
@@ -361,8 +395,9 @@ def input_handling(request_msg: str, input_option: Iterable,
             print(f'"{user_input}": {error_msg}\n')
 
 
-def play_series(num_hands: int, word_dict: Dict[str, List[str]],
-                comp_choice: str) -> Tuple[int, int]:
+def play_series(
+    num_hands: int, word_dict: Dict[str, List[str]], comp_choice: str
+) -> Tuple[int, int]:
     """
     Allow the user to play a series of hands. If the user opted to play
     against computer, it will play along with the user and return the computer's
@@ -376,40 +411,45 @@ def play_series(num_hands: int, word_dict: Dict[str, List[str]],
         num_hands -= 1
         hand = deal_hand(HAND_SIZE)
         # Resetting the replay message
-        replay_msg = 'Do you want to improve your score by replaying the hand? [y/n]'
+        replay_msg = "Do you want to improve your score by replaying the hand? [y/n]"
         print(f"{LINE_SEP}\nCurrent hand: {display_hand(hand)}")
 
-        sub_choice = input_handling('Do you want to substitute a letter? '
-                                    '[y/n]', 'yn')
+        sub_choice = input_handling(
+            "Do you want to substitute a letter? " "[y/n]", "yn"
+        )
 
         # Substitution and player plays the game
-        if sub_choice == 'y':
-            sub_letter = input_handling("Which letter would you like to "
-                                        "replace?", ascii_lowercase)
+        if sub_choice == "y":
+            sub_letter = input_handling(
+                "Which letter would you like to " "replace?", ascii_lowercase
+            )
             hand = substitute_hand(hand, sub_letter)
 
         hand_count = play_hand(hand, word_dict)
 
         # Computer plays
-        if comp_choice == 'y':
+        if comp_choice == "y":
             comp_hand_count = comp_play_hand(hand, word_dict)
 
             if comp_hand_count > hand_count:
                 print(f"{LINE_SEP}\nComputer wins!\n")
-                replay_msg = ('You have a chance to redeem yourself. '
-                              'Do you want to replay the hand? [y/n]')
+                replay_msg = (
+                    "You have a chance to redeem yourself. "
+                    "Do you want to replay the hand? [y/n]"
+                )
             elif comp_hand_count < hand_count:
                 print(f"{LINE_SEP}\nCongratulations! You beat the computer.\n")
             else:
                 print(f"{LINE_SEP}\nIt's a tie! You're on par with the computer.\n")
 
         # Replay the game (Only to the player)
-        replay_choice = input_handling(replay_msg, 'yn')
+        replay_choice = input_handling(replay_msg, "yn")
 
-        if replay_choice == 'y':
+        if replay_choice == "y":
             replay_hand_count = play_hand(hand, word_dict)
-            hand_count = replay_hand_count if replay_hand_count > hand_count \
-                else hand_count
+            hand_count = (
+                replay_hand_count if replay_hand_count > hand_count else hand_count
+            )
 
             if comp_hand_count > hand_count:
                 print("Nice try! Computer is still the winner.")
@@ -429,40 +469,51 @@ def play() -> None:
     WORD_DICT = load_words()
     total_series_points = 0
     comp_series_points = 0
-    game_choice = 'y'
-    comp_choice = 'n'
+    game_choice = "y"
+    comp_choice = "n"
 
-    while game_choice == 'y':
-        total_hands = read_val(int, "Enter the total number of hands "
-                                    "you want to play")
+    while game_choice == "y":
+        total_hands = read_val(
+            int, "Enter the total number of hands " "you want to play"
+        )
         comp_choice = input_handling(
-            'Do you want the computer to play against you? [y/n]', 'yn')
+            "Do you want the computer to play against you? [y/n]", "yn"
+        )
 
         total_points, comp_total_points = play_series(
-            total_hands, WORD_DICT, comp_choice)
+            total_hands, WORD_DICT, comp_choice
+        )
 
-        if comp_choice == 'y':
-            print(f"{LINE_SEP}\nTotal score over {total_hands} hands: \n"
-                  f"Player: {total_points}\n"
-                  f"Computer: {comp_total_points}\n{LINE_SEP}")
+        if comp_choice == "y":
+            print(
+                f"{LINE_SEP}\nTotal score over {total_hands} hands: \n"
+                f"Player: {total_points}\n"
+                f"Computer: {comp_total_points}\n{LINE_SEP}"
+            )
         else:
             print(
-                f"{LINE_SEP}\nTotal score over {total_hands} hands: {total_points}\n{LINE_SEP}")
+                f"{LINE_SEP}\nTotal score over {total_hands} hands: {total_points}\n{LINE_SEP}"
+            )
 
-        game_choice = input_handling("Do you want to play another series of hands? "
-                                     "[y/n]", "yn")
+        game_choice = input_handling(
+            "Do you want to play another series of hands? " "[y/n]", "yn"
+        )
         total_series_points += total_points
         comp_series_points += comp_total_points
 
-    if comp_choice == 'y':
-        print(f"{LINE_SEP}\nGAME OVER. Final points:\n"
-              f"Player: {total_series_points}\n"
-              f"Computer: {comp_series_points}\n"
-              f"Thank you for playing.\n{LINE_SEP}")
+    if comp_choice == "y":
+        print(
+            f"{LINE_SEP}\nGAME OVER. Final points:\n"
+            f"Player: {total_series_points}\n"
+            f"Computer: {comp_series_points}\n"
+            f"Thank you for playing.\n{LINE_SEP}"
+        )
     else:
-        print(f"{LINE_SEP}\nGAME OVER. Final points: {total_series_points}\n"
-              f"Thank you for playing.\n{LINE_SEP}")
+        print(
+            f"{LINE_SEP}\nGAME OVER. Final points: {total_series_points}\n"
+            f"Thank you for playing.\n{LINE_SEP}"
+        )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     play()

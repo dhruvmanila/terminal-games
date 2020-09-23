@@ -1,20 +1,21 @@
-import random
 import json
-from string import ascii_lowercase, punctuation, digits, whitespace
-from typing import Tuple, Iterable
+import random
 from itertools import chain
+from string import ascii_lowercase, digits, punctuation, whitespace
+from typing import Iterable, Tuple
 
 # Globals
 INSTRUCTION_FILENAME = "instructions.txt"
-WORDS_FILENAME = 'words.json'
+WORDS_FILENAME = "words.json"
 INPUT_CHECK = punctuation + digits + whitespace
-VOWELS = 'aeiou'
-LINE_SEP = '-' * 70
+VOWELS = "aeiou"
+LINE_SEP = "-" * 70
 
 
-def display_hangman(guess_rem: int, guessed: str, word: str = '') -> None:
-    if '_' not in guessed:
-        print(fr"""
+def display_hangman(guess_rem: int, guessed: str, word: str = "") -> None:
+    if "_" not in guessed:
+        print(
+            fr"""
                     +------+    +----------+
                     |         __| You won! |
                     |        /  +----------+
@@ -24,11 +25,12 @@ def display_hangman(guess_rem: int, guessed: str, word: str = '') -> None:
                     |      / \
                 ==================
           You saved the hangman: {guessed}
-                """)
-        return 
-    
+                """
+        )
+        return
+
     stages = [
-                fr"""
+        fr"""
                     +------+
                     |      |
                     |      o
@@ -39,7 +41,7 @@ def display_hangman(guess_rem: int, guessed: str, word: str = '') -> None:
                 ==================
               You lost him: {word}
                 """,
-                fr"""
+        fr"""
                     +------+
                     |      |
                     |      o
@@ -50,7 +52,7 @@ def display_hangman(guess_rem: int, guessed: str, word: str = '') -> None:
                 ==================
                 {guessed}
                 """,
-                fr"""
+        fr"""
                     +------+
                     |      |
                     |      o
@@ -61,7 +63,7 @@ def display_hangman(guess_rem: int, guessed: str, word: str = '') -> None:
                 ==================
                 {guessed}
                 """,
-                fr"""
+        fr"""
                     +------+
                     |      |
                     |      o
@@ -72,7 +74,7 @@ def display_hangman(guess_rem: int, guessed: str, word: str = '') -> None:
                 ==================
                 {guessed}
                 """,
-                fr"""
+        fr"""
                     +------+
                     |      |
                     |      o
@@ -83,7 +85,7 @@ def display_hangman(guess_rem: int, guessed: str, word: str = '') -> None:
                 ==================
                 {guessed}
                 """,
-                fr"""
+        fr"""
                     +------+
                     |      |
                     |      o
@@ -94,7 +96,7 @@ def display_hangman(guess_rem: int, guessed: str, word: str = '') -> None:
                 ==================
                 {guessed}
                 """,
-                fr"""
+        fr"""
                     +------+
                     |      |
                     |
@@ -104,7 +106,7 @@ def display_hangman(guess_rem: int, guessed: str, word: str = '') -> None:
                     |
                 ==================
                 {guessed}
-                """
+                """,
     ]
     print(stages[guess_rem])
 
@@ -157,12 +159,12 @@ def get_guessed_word(secret_word: str, letters_guessed: list) -> str:
     returns: string, comprised of letters, underscores (_), and spaces
         that represents which letters in secret_word have been guessed so far.
     """
-    word = ''
+    word = ""
     for letter in secret_word:
         if letter in letters_guessed:
             word += letter
         else:
-            word += '_ '
+            word += "_ "
     return word
 
 
@@ -175,12 +177,13 @@ def get_available_letters(letters_guessed: list) -> str:
     letter_list = list(ascii_lowercase)
     for letter in letters_guessed:
         letter_list.remove(letter)
-    letter_string = ''.join(letter_list)
+    letter_string = "".join(letter_list)
     return letter_string
 
 
-def warnings_check(letters_guessed: list, user_letter: str,
-                   num_warnings: int, num_guess: int) -> Tuple[int, int]:
+def warnings_check(
+    letters_guessed: list, user_letter: str, num_warnings: int, num_guess: int
+) -> Tuple[int, int]:
     """
     TODO: Make this more readable and efficient.
     secret_word: string, the secret word to guess
@@ -195,29 +198,40 @@ def warnings_check(letters_guessed: list, user_letter: str,
     """
     if len(user_letter) > 1 or user_letter in INPUT_CHECK:
         if num_warnings == 0:
-            print("\nOops! That is not a valid letter. \nYou have no warnings "
-                  "left so you lose one guess:")
+            print(
+                "\nOops! That is not a valid letter. \nYou have no warnings "
+                "left so you lose one guess:"
+            )
             num_guess -= 1
         else:
             num_warnings -= 1
-            print("\nOops! That is not a valid letter. \nYou "
-                  "have", num_warnings, "warnings left:")
+            print(
+                "\nOops! That is not a valid letter. \nYou " "have",
+                num_warnings,
+                "warnings left:",
+            )
 
     if user_letter in letters_guessed:
         if num_warnings == 0:
-            print("\nOops! You've already guessed that letter. \nYou "
-                  "have no warnings left so you lose one guess:")
+            print(
+                "\nOops! You've already guessed that letter. \nYou "
+                "have no warnings left so you lose one guess:"
+            )
             num_guess -= 1
         else:
             num_warnings -= 1
-            print("\nOops! You've already guessed that letter. \nYou "
-                  "have", num_warnings, "warnings left:")
+            print(
+                "\nOops! You've already guessed that letter. \nYou " "have",
+                num_warnings,
+                "warnings left:",
+            )
 
     return num_guess, num_warnings
 
 
-def input_handling(request_msg: str, input_option: Iterable,
-                   error_msg: str = "Invalid input.") -> str:
+def input_handling(
+    request_msg: str, input_option: Iterable, error_msg: str = "Invalid input."
+) -> str:
     """
     returns (str) user choice from the option and handles invalid input
 
@@ -251,7 +265,7 @@ def match_with_gaps(my_word_string: str, other_word: str) -> bool:
     symbol _ ; False otherwise
     """
     for i in range(len(my_word_string)):
-        if my_word_string[i] == '_' or my_word_string[i] == other_word[i]:
+        if my_word_string[i] == "_" or my_word_string[i] == other_word[i]:
             continue
         else:
             return False
@@ -270,17 +284,17 @@ def show_possible_matches(my_word: str, word_length: str, word_dict: dict) -> No
     already been revealed.
 
     """
-    word_matches = ''
-    my_word_string = ''.join([letter for letter in my_word if letter != ' '])
+    word_matches = ""
+    my_word_string = "".join([letter for letter in my_word if letter != " "])
     letter_count = 0
 
     for word in word_dict[word_length]:
         if match_with_gaps(my_word_string, word):
             letter_count += len(word) + 1
             if letter_count > len(LINE_SEP):
-                word_matches += '\n'
+                word_matches += "\n"
                 letter_count = len(word) + 1
-            word_matches += (word + ' ')
+            word_matches += word + " "
 
     print(f"\nPossible word matches for [ {my_word} ] are:\n{word_matches}")
 
@@ -296,7 +310,8 @@ def hangman_game(secret_word: str, word_dict: dict, hint_choice: str) -> int:
     hint_count = 1
     total_score = 0
 
-    print(r"""
+    print(
+        r"""
    _                                             
   | |                                            
   | |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
@@ -305,44 +320,44 @@ def hangman_game(secret_word: str, word_dict: dict, hint_choice: str) -> int:
   |_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
                       __/ |                      
                      |___/  
-                           """)
+                           """
+    )
 
-    print(f'{LINE_SEP}\nWelcome to the game, Hangman!')
-    print(f'I am thinking of a word that is {len(secret_word)} letters long.')
-    print(f'You have {num_warnings} warnings left.')
+    print(f"{LINE_SEP}\nWelcome to the game, Hangman!")
+    print(f"I am thinking of a word that is {len(secret_word)} letters long.")
+    print(f"You have {num_warnings} warnings left.")
 
     while num_guess > 0:
         guessed_word = get_guessed_word(secret_word, letters_guessed)
         display_hangman(num_guess, guessed_word)
-        print(f'{LINE_SEP}\nYou have {num_guess} guesses left.')
+        print(f"{LINE_SEP}\nYou have {num_guess} guesses left.")
 
         available_letters = get_available_letters(letters_guessed)
-        print(f'Available letters: {available_letters}')
+        print(f"Available letters: {available_letters}")
 
-        user_letter = input('Please guess a letter: ').lower()
+        user_letter = input("Please guess a letter: ").lower()
 
         if len(user_letter) > 1 or user_letter in INPUT_CHECK:
-            if hint_choice == 'y' and user_letter == '*' and hint_count == 1:
+            if hint_choice == "y" and user_letter == "*" and hint_count == 1:
                 word_length = str(len(secret_word))
                 show_possible_matches(guessed_word, word_length, word_dict)
                 hint_count -= 1
                 continue
 
             num_guess, num_warnings = warnings_check(
-                letters_guessed, user_letter, num_warnings,
-                num_guess)
+                letters_guessed, user_letter, num_warnings, num_guess
+            )
             continue
 
         elif user_letter in letters_guessed:
             num_guess, num_warnings = warnings_check(
-                letters_guessed, user_letter, num_warnings,
-                num_guess)
+                letters_guessed, user_letter, num_warnings, num_guess
+            )
 
         elif user_letter not in secret_word:
             print(f"\nOops! That letter is not in my word:")
             letters_guessed.append(user_letter)
-            num_guess = num_guess - 2 if user_letter in VOWELS else \
-                num_guess - 1
+            num_guess = num_guess - 2 if user_letter in VOWELS else num_guess - 1
 
         elif user_letter in secret_word:
             letters_guessed.append(user_letter)
@@ -359,8 +374,10 @@ def hangman_game(secret_word: str, word_dict: dict, hint_choice: str) -> int:
 
     if num_guess <= 0:
         display_hangman(0, guessed_word, secret_word)
-        print(f"{LINE_SEP}\nSorry, you ran out of guesses. The word was "
-              f"{secret_word}.")
+        print(
+            f"{LINE_SEP}\nSorry, you ran out of guesses. The word was "
+            f"{secret_word}."
+        )
 
     return total_score
 
@@ -374,17 +391,17 @@ def play():
     WORD_DICT = load_words()
     final_score = 0
 
-    hint_choice = input_handling('Do you want to play with hints? [y/n]', 'yn')
+    hint_choice = input_handling("Do you want to play with hints? [y/n]", "yn")
 
-    user_choice = 'y'
-    while user_choice == 'y':
+    user_choice = "y"
+    while user_choice == "y":
         secret_word = choose_word(WORD_DICT)
         total_score = hangman_game(secret_word, WORD_DICT, hint_choice)
         final_score += total_score
-        user_choice = input_handling('Do you want to play again? [y/n]', 'yn')
+        user_choice = input_handling("Do you want to play again? [y/n]", "yn")
 
-    print(f'{LINE_SEP}\nYour total score for this session is: {final_score}')
-    print(f'Thank you for playing.\n{LINE_SEP}')
+    print(f"{LINE_SEP}\nYour total score for this session is: {final_score}")
+    print(f"Thank you for playing.\n{LINE_SEP}")
 
 
 if __name__ == "__main__":

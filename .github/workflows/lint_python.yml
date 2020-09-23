@@ -1,15 +1,12 @@
 name: lint_python
-on:
-  pull_request:
-  push:
-  #  branches: [master]
+on: [push, pull_request]
 jobs:
   lint_python:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest]    # [ubuntu-latest, macos-latest, windows-latest]
-        python-version: [3.9.0-rc.1]  # [2.7, 3.5, 3.6, 3.7, 3.8, pypy3]
+        os: [ubuntu-latest, macos-latest, windows-latest] 
+        python-version: [3.8, 3.9.0-rc.1]  # [2.7, 3.5, 3.6, 3.7, 3.8, pypy3]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
@@ -17,14 +14,10 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - run: pip install black codespell flake8 isort pytest
-      - run: black --check . || true
-      # - run: black --diff . || true
-      # - if: matrix.python-version >= 3.6
-      #  run: |
-      #    pip install black
-      #    black --check . || true
-      - run: codespell --quiet-level=2 --skip="*.json"  # --ignore-words-list=""
+      - run: black --check . 
+        # ignore words.json files
+      - run: codespell --quiet-level=2 --skip="*.json"  
+        # look at PR #1
       - run: flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-      - run: isort --profile black . || true
-      - run: pip install -r requirements.txt || true
+      - run: isort --profile black . 
       - run: pytest .

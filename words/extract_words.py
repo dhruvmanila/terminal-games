@@ -25,7 +25,7 @@ def extract_words(to_file):
         with open(f"words_json/{word_count}_letter_words.json") as word_file:
             json_tree = json.load(word_file)
             for json_dict in json_tree:
-                word = json_dict['word']
+                word = json_dict["word"]
                 word_code = str(len(word)) + word[0]
                 if word_code not in word_dict:
                     word_dict[word_code] = [word]
@@ -41,5 +41,5 @@ def extract_words(to_file):
 
 
 if __name__ == "__main__":
-    with open('words.json', 'w') as main_word_file:
+    with open("words.json", "w") as main_word_file:
         extract_words(main_word_file)
